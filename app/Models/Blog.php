@@ -12,14 +12,37 @@ class Blog extends Model
 
     protected $guarded = [];
 
-    public function translations()
+   public function translations()
     {
-        return $this->hasMany(BlogTranslation::class, 'blog_id');
+        return $this->hasMany(BlogTranslation::class);
     }
 
-    public function translation($lang = 'id')
+    public function getTitleAttribute()
     {
-        return $this->translations->where('lang', $lang)->first();
+        $locale = session('locale', config('app.locale'));
+        $translation = $this->translations->where('lang', $locale)->first();
+
+        // Fallback ke bahasa Inggris jika tidak ada
+        return $translation?->title ?? $this->translations->where('lang', 'en')->first()?->title;
     }
+
+    public function getSubtitleAttribute()
+    {
+        $locale = session('locale', config('app.locale'));
+        $translation = $this->translations->where('lang', $locale)->first();
+        return $translation?->subtitle ?? $this->translations->where('lang', 'en')->first()?->subtitle;
+    }
+
+    public function getContentAttribute()
+    {
+        $locale = session('locale', config('app.locale'));
+        $translation = $this->translations->where('lang', $locale)->first();
+        return $translation?->content ?? $this->translations->where('lang', 'en')->first()?->content;
+    }
+
+	 public function getRouteKeyName()
+	{
+		return 'slug';
+	}
 
 }

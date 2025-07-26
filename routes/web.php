@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MailController;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +16,7 @@ Route::get('/welcome', function () {
 Route::get('/send-mail', [MailController::class, 'sendMail']);
 
 Route::get('/', function () {
+	// $blogs = Blog::with('translations:lang,title')->take(5)->pluck('id,image,slug,title');
     return view('home');
 });
 Route::get('/about', function () {
@@ -32,24 +35,7 @@ Route::get('/blog', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
-Route::post('/login', function (Request $request) {
-    $request->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-        if (Auth::attempt([
-            'username' => $request->username,
-            'password' => $request->password,
-        ])) {
-            return redirect()->intended(route('dashboard.index'));
-        }
-
-        throw ValidationException::withMessages([
-            'message' => ['username atau password salah.'],
-        ]);
-    }
-);
+Route::post('/login', [AuthController::class, 'login']);
 Route::delete('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
@@ -57,13 +43,19 @@ Route::delete('/logout', function (Request $request) {
     return redirect('/');
 });
 
-
-
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
+Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('dashboard.index');
     })->name('index');
     Route::resource('blog', BlogController::class);
 });
+
+Route::post('/language', function (Request $request) {
+    $lang = $request->input('lang');
+    if (in_array($lang, ['en', 'id'])) {
+        session(['locale' => $lang]);
+    }
+    return back();
+})->name('language.switch');
 
 

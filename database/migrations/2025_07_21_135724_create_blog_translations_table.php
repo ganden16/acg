@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('blog_translations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('blog_id')->constrained()->onDelete();
+            $table->foreignId('blog_id')->constrained()->onDelete('cascade');
             $table->enum('lang',['en','id'])->default('id');
             $table->string('title');
             $table->string('subtitle')->nullable();
