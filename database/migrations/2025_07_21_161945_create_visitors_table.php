@@ -13,9 +13,14 @@ return new class extends Migration
     {
        Schema::create('visitors', function (Blueprint $table) {
             $table->id();
-            $table->ipAddress('ip');
-            $table->dateTime('visited_at');
+            $table->string('visitor_key', 32)->index();
+            $table->string('ip_address', 45)->index();
+            $table->text('user_agent')->nullable();
+            $table->timestamp('visited_at')->index();
             $table->timestamps();
+
+            $table->index(['visitor_key', 'visited_at']);
+
         });
     }
 

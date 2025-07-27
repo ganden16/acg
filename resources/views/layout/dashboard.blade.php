@@ -35,13 +35,7 @@
  <!-- [ Sidebar Menu ] start -->
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
-    <div class="m-header flex items-center py-4 px-6 h-header-height">
-      <a href="/" class="b-brand flex items-center gap-3">
-        <!-- ========   Change your logo from here   ============ -->
-        <img src="{{ asset('assets1/images/logo-acg.png') }}" class="img-fluid logo logo-lg" alt="logo" />
-        <img src="{{ asset('assets1/images/logo-acg.png') }}" class="img-fluid logo logo-sm" alt="logo" />
-      </a>
-    </div>
+    <img src="{{ asset('assets1/images/acg-1.png') }}" class="w-30 mt-5" alt="logo" />
     <div class="navbar-content h-[calc(100vh_-_74px)] py-2.5">
       <ul class="pc-navbar">
         <li class="pc-item pc-caption">
@@ -90,7 +84,7 @@
 <!-- [Mobile Media Block end] -->
 <div class="ms-auto">
   <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
-    <li class="dropdown pc-h-item">
+    {{-- <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
         <i data-feather="sun"></i>
@@ -105,7 +99,7 @@
           <span>Light</span>
         </a>
       </div>
-    </li>
+    </li> --}}
     <li class="dropdown pc-h-item header-user-profile">
       <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">
@@ -118,8 +112,8 @@
               <img src="{{ asset('assets1/images/user/avatar-2.jpg') }}" alt="user-image" class="w-10 rounded-full" />
             </div>
             <div class="grow ms-3">
-              <h6 class="mb-1 text-white">Username</h6>
-              <span class="text-white">name</span>
+              <h6 class="mb-1 text-white">{{ auth()->user()->username }}</h6>
+              {{-- <span class="text-white">name</span> --}}
             </div>
           </div>
         </div>
@@ -141,7 +135,7 @@
                 <span>Share</span>
               </span>
             </a> --}}
-            <a href="/dashboard/admin/profile" class="dropdown-item">
+            <a href="{{ route('dashboard.change-password') }}" class="dropdown-item">
               <span>
                 <svg class="pc-icon text-muted me-2 inline-block">
                   <use xlink:href="#custom-lock-outline"></use>
@@ -150,7 +144,7 @@
               </span>
             </a>
             <div class="grid my-3">
-              <button class="btn btn-primary flex items-center justify-center">
+              <button onclick="logout()" class="btn btn-primary flex items-center justify-center">
                 <svg class="pc-icon me-2 w-[22px] h-[22px]">
                   <use xlink:href="#custom-logout-1-outline"></use>
                 </svg>
@@ -162,7 +156,8 @@
       </div>
     </li>
   </ul>
-</div></div>
+</div>
+</div>
 </header>
 <!-- [ Header ] end -->
 
@@ -176,9 +171,7 @@
               <h5 class="mb-0 font-medium">Default</h5>
             </div> --}}
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-              <li class="breadcrumb-item" aria-current="page">Default</li>
+              @yield('li-breadcrumb')
             </ul>
           </div>
         </div>
@@ -206,6 +199,11 @@
       </div>
     </footer>
 
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+        @method('DELETE')
+    </form>
+
     <!-- Required Js -->
     <script src="{{ asset('assets1/js/plugins/simplebar.min.js') }}"></script>
     <script src="{{ asset('assets1/js/plugins/popper.min.js') }}"></script>
@@ -218,7 +216,6 @@
 
     <div class="floting-button fixed bottom-[50px] right-[30px] z-[1030]">
     </div>
-
 
     <script>
       layout_change('false');
@@ -252,5 +249,16 @@
 
 
   </body>
-  <!-- [Body] end -->
+  <script>
+    function logout() {
+        if (confirm('Are you sure you want to logout?')) {
+            const logoutForm = document.getElementById('logout-form');
+            if (logoutForm) {
+                logoutForm.submit();
+            } else {
+                alert('An error occurred. Please try again.');
+            }
+        }
+    }
+    </script>
 </html>

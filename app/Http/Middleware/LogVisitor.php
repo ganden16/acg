@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use App\Models\Visitor;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
 class LogVisitor
@@ -17,15 +19,20 @@ class LogVisitor
     public function handle(Request $request, Closure $next): Response
     {
         $ip = $request->ip();
-        $oneHourAgo = now()->subHour();
+        $userAgent = $request->userAgent();
 
-        $existingVisitor = Visitor::where('ip', $ip)
-            ->where('visited_at', '>=', $oneHourAgo)
-            ->exists();
+        $visitorKey = md5($ip . $userAgent);
+        $timeLimit = now()->subMinutes(15);
+
+        $existingVisitor = Visitor::where('visitor_key', $visitorKey)
+                                ->where('visited_at', '>', $timeLimit)
+                                ->first();
 
         if (!$existingVisitor) {
             Visitor::create([
-                'ip' => $ip,
+                'visitor_key' => $visitorKey,
+                'ip_address' => $ip,
+                'user_agent' => $userAgent,
                 'visited_at' => now(),
             ]);
         }

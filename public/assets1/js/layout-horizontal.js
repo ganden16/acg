@@ -5,10 +5,10 @@
   const pc_nav_content = document.querySelector('.navbar-content').innerHTML;
 
   // Update the logos to match the selected layout
-  var logoSrc = '../assets/images/logo-dark.svg';
+  var logoSrc = '../assets1/images/logo-acg.png';
   var element = document.querySelector('.b-brand .logo-lg');
   if (element) {
-    // element.setAttribute('src', logoSrc);
+    element.setAttribute('src', logoSrc);
   }
 
 

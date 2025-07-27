@@ -17,9 +17,19 @@ class BlogController extends Controller
      */
     public function index()
     {
-        // $blogs = Blog::with('translations:lang,title')->pluck('id,image,slug,title')->paginate(20);
-        // return view('dashboard.blog.index', compact('blogs'));
-        return view('dashboard.blog.index');
+        $blogs = Blog::join(new BlogTranslation()->getTable().' as bt' , 'blogs.id', '=', 'bt.blog_id')
+            ->select(
+                'blogs.id as id',
+                'blogs.image as image',
+                'blogs.slug as slug',
+                'bt.title as title',
+                'bt.subtitle as subtitle'
+            )
+            ->where('bt.lang', 'id')
+            ->orderBy('blogs.updated_at', 'desc')
+            ->get();
+
+        return view('dashboard.blog.index', compact('blogs'));
     }
 
     /**
@@ -35,7 +45,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
 	{
-		$validator = Validator::make($request->all(), [
+		$request->validate([
 			'fileImage' => 'nullable|image|max:5000',
 			'title_id' => 'required|string|max:255',
 			'title_en' => 'required|string|max:255',
@@ -44,10 +54,6 @@ class BlogController extends Controller
 			'subtitle_id' => 'nullable|string|max:255',
 			'subtitle_en' => 'nullable|string|max:255',
 		]);
-
-		if ($validator->fails()) {
-			return redirect()->back()->withErrors($validator)->withInput();
-		}
 
 		$baseSlug = Str::slug($request->title_en);
 		$slug = $baseSlug;
@@ -58,7 +64,7 @@ class BlogController extends Controller
 		}
 		$url = null;
 		if ($request->hasFile('fileImage')) {
-			$path = $request->file('fileImage')->store('images/blog');
+			$path = $request->file('fileImage')->store('images/blogs');
 			$url = Storage::url($path);
 		}
 
@@ -83,11 +89,12 @@ class BlogController extends Controller
 					'content' => $request->content_en,
 			]);
 			DB::commit();
-			return redirect()->back()->with('success', 'Blog berhasil ditambahkan.');
+
+			return redirect()->back()->with('success', 'Blog has been created successfully.');
 
 		} catch (\Exception $e) {
 			DB::rollback();
-			return redirect()->back()->with('error', 'Gagal menyimpan blog: ' . $e->getMessage());
+			return redirect()->back()->with('error', 'Blog failed to create, please try again. Error:' . $e->getMessage());
 		}
 	}
 
@@ -104,8 +111,9 @@ class BlogController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Blog $blog)
+
     {
-        $blog->load('translations');
+        $blog->load('translation_id', 'translation_en');
         return view('dashboard.blog.edit', compact('blog'));
     }
 
@@ -114,7 +122,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-		$validator = Validator::make($request->all(), [
+		$request->validate([
 			'fileImage' => 'nullable|image|max:5000',
 			'title_id' => 'required|string|max:255',
 			'title_en' => 'required|string|max:255',
@@ -124,8 +132,12 @@ class BlogController extends Controller
 			'subtitle_en' => 'nullable|string|max:255',
 		]);
 
-		if ($validator->fails()) {
-			return redirect()->back()->withErrors($validator)->withInput();
+        $baseSlug = Str::slug($request->title_en);
+		$slug = $baseSlug;
+		$count = 2;
+		while (Blog::where('slug', $slug)->exists()) {
+			$slug = $baseSlug . '-' . $count;
+			$count++;
 		}
 
       $image = $blog->image ?? null;
@@ -135,12 +147,12 @@ class BlogController extends Controller
 				$path =  $urlImage[1];
 				Storage::delete($path);
 			}
-			$path = $request->fileImage->store('images/blog');
+			$path = $request->fileImage->store('images/blogs');
 			$image = Storage::url($path);
 		}
 
         $blog->update([
-            'slug' => $request->slug,
+            'slug' => $slug,
             'image' => $image,
         ]);
 
@@ -162,7 +174,7 @@ class BlogController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Blog berhasil diperbarui.');
+        return redirect()->route('dashboard.blog.index')->with('success-update', 'Blog has been updated successfully.');
     }
 
     /**
@@ -171,6 +183,6 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        return redirect()->route('dashboard.blog.index')->with('success', 'Blog berhasil dihapus.');
+        return redirect()->route('dashboard.blog.index')->with('success-delete', 'Blog has been deleted successfully.');
     }
 }

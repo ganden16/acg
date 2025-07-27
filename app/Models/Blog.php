@@ -17,27 +17,14 @@ class Blog extends Model
         return $this->hasMany(BlogTranslation::class);
     }
 
-    public function getTitleAttribute()
+   public function translation_id()
     {
-        $locale = session('locale', config('app.locale'));
-        $translation = $this->translations->where('lang', $locale)->first();
-
-        // Fallback ke bahasa Inggris jika tidak ada
-        return $translation?->title ?? $this->translations->where('lang', 'en')->first()?->title;
+        return $this->hasOne(BlogTranslation::class)->where('lang', 'id');
     }
 
-    public function getSubtitleAttribute()
+   public function translation_en()
     {
-        $locale = session('locale', config('app.locale'));
-        $translation = $this->translations->where('lang', $locale)->first();
-        return $translation?->subtitle ?? $this->translations->where('lang', 'en')->first()?->subtitle;
-    }
-
-    public function getContentAttribute()
-    {
-        $locale = session('locale', config('app.locale'));
-        $translation = $this->translations->where('lang', $locale)->first();
-        return $translation?->content ?? $this->translations->where('lang', 'en')->first()?->content;
+        return $this->hasOne(BlogTranslation::class)->where('lang', 'en');
     }
 
 	 public function getRouteKeyName()
