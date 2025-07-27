@@ -17,8 +17,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::with('translations:lang,title')->pluck('id,image,slug,title')->paginate(20);
-        return view('dashboard.blog.index', compact('blogs'));
+        // $blogs = Blog::with('translations:lang,title')->pluck('id,image,slug,title')->paginate(20);
+        // return view('dashboard.blog.index', compact('blogs'));
+        return view('dashboard.blog.index');
     }
 
     /**
@@ -159,7 +160,7 @@ class BlogController extends Controller
                 'subtitle' => $request->subtitle_en ?? null,
                 'content' => $request->content_en ?? null,
             ]);
-        } 
+        }
 
         return redirect()->back()->with('success', 'Blog berhasil diperbarui.');
     }

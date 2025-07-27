@@ -43,11 +43,13 @@ Route::delete('/logout', function (Request $request) {
     return redirect('/');
 });
 
-Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
+Route::prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('/', function () {
         return view('dashboard.index');
     })->name('index');
     Route::resource('blog', BlogController::class);
+    Route::get('admin/profile', [AuthController::class, 'profile'])->name('profile');
+    Route::put('admin/profile', [AuthController::class, 'updateProfile'])->name('profile.update');
 });
 
 Route::post('/language', function (Request $request) {
