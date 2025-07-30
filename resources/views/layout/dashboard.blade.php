@@ -3,19 +3,18 @@
   <!-- [Head] start -->
 
   <head>
-    <title>@yield('title', 'ACG')</title>
-    <!-- [Meta] -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
-    <link rel="stylesheet" href="{{ asset('assets1/fonts/feather.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets1/fonts/material.css') }}" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('assets1/fonts/tabler-icons.min.css') }}" />
-    <link rel="stylesheet" href={{ asset('assets1/css/style.css') }} id="main-style-link" />
-    <link rel="icon" href="{{ asset('assets1/images/logo/acg4.png') }}" type="image/x-icon" />
+      <!-- [Meta] -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+      <link rel="stylesheet" href="{{ asset('assets1/fonts/feather.css') }}" />
+      <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome.css') }}" />
+      <link rel="stylesheet" href="{{ asset('assets1/fonts/material.css') }}" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="{{ asset('assets1/fonts/tabler-icons.min.css') }}" />
+      <link rel="stylesheet" href={{ asset('assets1/css/style.css') }} id="main-style-link" />
+      <link rel="icon" href="{{ asset('assets1/images/logo/acg4.png') }}" type="image/x-icon" />
 
-
+      <title>@yield('title', 'ACG')</title>
 
     @vite('resources/css/app.css')
     @yield('link-meta')
@@ -84,7 +83,7 @@
 <!-- [Mobile Media Block end] -->
 <div class="ms-auto">
   <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
-    {{-- <li class="dropdown pc-h-item">
+    <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
         <i data-feather="sun"></i>
@@ -99,7 +98,7 @@
           <span>Light</span>
         </a>
       </div>
-    </li> --}}
+    </li>
     <li class="dropdown pc-h-item header-user-profile">
       <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">

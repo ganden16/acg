@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/send-mail', [MailController::class, 'sendMail']);
+Route::post('/send-mail', [MailController::class, 'sendMail'])->name('send-email');
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
