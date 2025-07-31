@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -23,6 +24,7 @@ class PageController extends Controller
     }
 
     public function blog(){
-        return view('blog');
+        $blogs = Blog::with('translation_en')->latest()->paginate(7);
+        return view('blog', compact('blogs'));
     }
 }

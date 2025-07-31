@@ -32,7 +32,7 @@ class MailController extends Controller
         Mail::to($request->email)->send(new SendMailUser($data));
         Mail::to(env('MAIL_COMPANY_ADDRESS'))->send(new SendMailCompany($data));
 
-        return redirect()->route('contact')->with('success-send-email', 'Your message has been sent successfully.');
+        return redirect()->back()->with('success-send-email', 'Your message has been sent successfully.');
 
          }catch(\Exception $e){
             return redirect()->back()->with('error-send-email', $e->getMessage());

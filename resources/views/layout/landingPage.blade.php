@@ -67,10 +67,11 @@
     <div class="flex lg:flex-1">
       <a href="#" class="p-2 md:me-10">
         <img src="{{ asset('assets1/images/logo/acg2-rem.png') }}" alt="p-0 m-0" class="w-20" />
+        {{-- <img src="{{ asset('assets1/images/logo-rb-2.png') }}" alt="p-0 m-0" class="w-20" /> --}}
       </a>
     </div>
     <div class="flex md:hidden">
-      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex cursor-pointer items-center justify-center rounded-md p-2.5 text-gray-700">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex cursor-pointer items-center justify-center rounded-md p-2.5 text-gray-100">
         <span class="sr-only">Open main menu</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
           <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -78,15 +79,15 @@
       </button>
     </div>
     <el-popover-group class="hidden md:flex md:gap-x-12">
-      <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-gray-100">Home</a>
-      <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-gray-100">About</a>
-      <a href="{{ route('product') }}" class="text-sm/6 font-semibold text-gray-100">Product</a>
-      <a href="{{ route('blog') }}" class="text-sm/6 font-semibold text-gray-100">Blog</a>
-      <a href="{{ route('contact') }}" class="text-sm/6 font-semibold text-gray-100">Contact</a>
+      <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Home</a>
+      <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">About</a>
+      <a href="{{ route('product') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Product</a>
+      <a href="{{ route('blog') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Blog</a>
+      <a href="{{ route('contact') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Contact</a>
     </el-popover-group>
     <div class="hidden md:flex md:flex-1 md:justify-end">
       <div class="relative">
-        <button popovertarget="desktop-menu-language" class="flex items-center cursor-pointer gap-x-1 text-sm/6 font-semibold text-gray-100">
+        <button popovertarget="desktop-menu-language" class="flex items-center cursor-pointer gap-x-1 text-sm/6 font-semibold text-gray-100 hover:text-gray-400">
             Language
             <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-400">
             <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
@@ -172,24 +173,24 @@
 
   <!-- Footer -->
 <footer class="" style="background-color: #7a8450">
-  <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+  <div class="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-12 lg:px-8">
     <nav class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
-      <a href="{{ route('home') }}" class="text-gray-400 hover:text-white">Home</a>
-      <a href="{{ route('about') }}" class="text-gray-400 hover:text-white">About</a>
-      <a href="{{ route('product') }}" class="text-gray-400 hover:text-white">Product</a>
-      <a href="{{ route('blog') }}" class="text-gray-400 hover:text-white">Blog</a>
-      <a href="{{ route('contact') }}" class="text-gray-400 hover:text-white">Contact</a>
+      <a href="{{ route('home') }}" class="text-gray-100 hover:text-gray-400">Home</a>
+      <a href="{{ route('about') }}" class="text-gray-100 hover:text-gray-400">About</a>
+      <a href="{{ route('product') }}" class="text-gray-100 hover:text-gray-400">Product</a>
+      <a href="{{ route('blog') }}" class="text-gray-100 hover:text-gray-400">Blog</a>
+      <a href="{{ route('contact') }}" class="text-gray-100 hover:text-gray-400">Contact</a>
     </nav>
     <div class="mt-16 flex justify-center gap-x-10">
-        <a href="tel:+62881082048368" class="text-gray-400 hover:text-gray-300">
+        <a href="tel:+62881082048368" class="text-gray-100 hover:text-gray-400">
             <span class="sr-only">Telephone</span>
             <i class="fas fa-phone"></i>
         </a>
-        <a href="https://www.linkedin.com/company/pt-adhi-cahaya-global" class="text-gray-400 hover:text-gray-300">
+        <a href="https://www.linkedin.com/company/pt-adhi-cahaya-global" class="text-gray-100 hover:text-gray-400">
             <span class="sr-only">Linkedin</span>
             <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="mailto:pt.adhicahayaglobal@gmail.com" class="text-gray-400 hover:text-gray-300">
+        <a href="mailto:pt.adhicahayaglobal@gmail.com" class="text-gray-100 hover:text-gray-400">
             <span class="sr-only">Email</span>
             <i class="fa-solid fa-envelope"></i>
         </a>
@@ -227,8 +228,8 @@
         </svg>
       </a>
     </div> --}}
-    <p class="mt-10 text-center text-sm/6 text-gray-400"><i class="fa-solid fa-location-dot"></i>  Mojosulur, Mojosari, Kab. Mojokerto, Jawa Timur. 61382</p>
-    <p class="mt-8 text-center text-sm/6 text-gray-400">&copy; 2025 PT. ADHI CAHAYA GLOBAL. All rights reserved.</p>
+    <p class="mt-10 text-center text-sm/6 text-gray-100"><i class="fa-solid fa-location-dot"></i>  Mojosulur, Mojosari, Kab. Mojokerto, Jawa Timur. 61382</p>
+    <p class="mt-8 text-center text-sm/6 text-gray-100">&copy; 2025 PT. ADHI CAHAYA GLOBAL. All rights reserved.</p>
   </div>
 </footer>
 
