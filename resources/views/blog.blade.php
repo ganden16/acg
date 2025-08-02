@@ -16,7 +16,7 @@
             </div>
           </div> --}}
           <div class="text-center">
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Our Blogs</h1>
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">{{ __('blog.title') }}</h1>
             {{-- <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">We are excited to hear from you</p> --}}
             {{-- <div class="mt-10 flex items-center justify-center gap-x-6">
               <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
@@ -42,7 +42,7 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:max-w-4xl">
-      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">List of Our Blogs</h2>
+      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{ __('blog.titleList') }}</h2>
       {{-- <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p> --}}
       <div class="mt-16 space-y-20 lg:mt-20 lg:space-y-32">
         @foreach ($blogs as $blog )
@@ -54,7 +54,7 @@
           <div>
             <div class="flex items-center gap-x-4 text-xs">
                 <time datetime="{{ $blog->updated_at->toISOString() }}" class="text-gray-500">
-                    last updated at {{ $blog->updated_at->format('F j, Y') }}
+                    {{ __('blog.lastUpdated') }} {{ $blog->updated_at->format('F j, Y') }}
                 </time>
               {{-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> --}}
             </div>
@@ -62,10 +62,10 @@
               <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                 <a href="#">
                   <span class="absolute inset-0"></span>
-                 {{ $blog->translation_en->title }}
+                 {{ $blog->translations->first()->title }}
                 </a>
               </h3>
-              <p class="mt-5 text-sm/6 text-gray-600">{{ Str::limit($blog->translation_en->content, 200, '...') }}</p>
+              <p class="mt-5 text-sm/6 text-gray-600">{{ Str::limit($blog->translations->first()->content, 200, '...') }}</p>
             </div>
             <div class="mt-6 flex border-t border-gray-900/5 pt-6">
               <a href type="button" class="rounded-md bg-lime-600 px-3.5 py-2.5 text-sm font-semibold text-gray-100 shadow-xs hover:bg-lime-700">Read More...</a>

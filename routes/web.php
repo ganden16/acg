@@ -31,12 +31,6 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
     Route::put('change-password', [AuthController::class, 'changePassword'])->name('change-password.update');
 });
 
-Route::post('/language', function (Request $request) {
-    $lang = $request->input('lang');
-    if (in_array($lang, ['en', 'id'])) {
-        session(['locale' => $lang]);
-    }
-    return back();
-})->name('language.switch');
+Route::get('/language/{lang}', [PageController::class, 'changeLanguage'])->name('language.switch');
 
 

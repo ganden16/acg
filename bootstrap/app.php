@@ -14,7 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->append(LogVisitor::class);
-		  $middleware->prepend(SetLocale::class);
+		$middleware->web(append: [
+            SetLocale::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

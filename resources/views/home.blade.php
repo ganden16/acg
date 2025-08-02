@@ -7,24 +7,24 @@
     <!-- Hero section -->
     <div class="relative bg-white">
         <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-            <div class="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-40 lg:pb-48 xl:col-span-6">
-            <div class="mx-auto max-w-lg lg:mx-0">
-                <img class="h-11" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
-                <div class="hidden sm:mt-32 sm:flex lg:mt-16">
-                <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-                </div>
-                </div>
-                <h1 class="mt-24 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:mt-10 sm:text-7xl">Data to enrich your business</h1>
-                <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
-                <div class="mt-10 flex items-center gap-x-6">
-                <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-                <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            <div class="px-6 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 pt-5 lg:pb-48 xl:col-span-6">
+                <div class="mx-auto max-w-lg lg:mx-0">
+                    <img class="h-11" src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="PT. Adhi Cahaya Global"">
+                    {{-- <div class="hidden sm:mt-32 md:mt-1 sm:flex lg:mt-16">
+                        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div> --}}
+                    <h1 class="mt-24 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:mt-10 sm:text-7xl">PT. Adhi Cahaya Global</h1>
+                    <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Your Reliable Partner for Ethical Trade & Authentic Indonesian Commodities</p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <a href="https://wa.me/62881082048368" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.askForOffer') }}</a>
+                        <a href="{{ route('contact') }}" class="text-sm/6 font-semibold text-green-900 hover:scale-105 underline">{{ __('function.contactUs') }}<span aria-hidden="true">→</span></a>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-            <img class="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full" src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80" alt="">
+            <div class="relative mt-6 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 ">
+                <img class="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl" src="{{ asset('assets1/images/landingPage/picture4.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -50,33 +50,35 @@
         <div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
           <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">We’re changing the way people connect</h1>
-              <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt mollit id pariatur in voluptate cillum. Eu voluptate tempor esse minim amet fugiat veniam occaecat aliqua.</p>
+              <h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">{{ __('home.titleAbout') }}</h1>
+              <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">{{ __('home.descriptionAbout') }}</p>
             </div>
             <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
               <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                 <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <video controls autoplay muted loop class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                        <source src="{{ asset('assets1/video/video1.mov') }}" type="video/mp4">
+                    </video>
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"></div>
                 </div>
               </div>
               <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                 <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <img src="{{ asset('assets1/images/landingPage/picture7.png') }}" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"></div>
                 </div>
                 <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <img src="{{ asset('assets1/images/landingPage/picture9.png') }}" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"></div>
                 </div>
               </div>
               <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                 <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <img src="{{ asset('assets1/images/landingPage/picture11.png') }}" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"></div>
                 </div>
                 <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <img src="{{ asset('assets1/images/landingPage/picture10.png') }}" alt="" class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"></div>
                 </div>
               </div>
@@ -118,161 +120,92 @@
     </div> --}}
 
     <!-- Our Products -->
-    <div class="bg-white py-24 sm:pt-40 sm:pb-10">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Our Product</h2>
-            <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+    <div class="bg-white sm:pb-10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-6">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
+                    {{ __('home.titleProduct') }}
+                </h2>
+                <p class="mt-2 text-lg/8 text-gray-600">
+                    {{ __('home.descriptionProduct') }}
+                </p>
             </div>
-            <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
-                <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="absolute inset-0 -z-10 size-full object-cover">
-                <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40"></div>
-                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
 
-                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
-                <time datetime="2020-03-16" class="mr-8">Mar 16, 2020</time>
-                <div class="-ml-4 flex items-center gap-x-4">
-                    <svg viewBox="0 0 2 2" class="-ml-0.5 size-0.5 flex-none fill-white/50">
-                    <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <div class="flex gap-x-2.5">
-                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 flex-none rounded-full bg-white/10">
-                    Michael Foster
-                    </div>
-                </div>
-                </div>
-                <h3 class="mt-3 text-lg/6 font-semibold text-white">
-                <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Boost your conversion rate
+            <div class="mt-4 sm:mt-0">
+                <a
+                    href="{{ route('product') }}"
+                    class="text-lg font-medium text-green-900 hover:text-green-700 transition duration-150 ease-in-out"
+                    style="text-decoration: underline;"
+                >
+                    {{ __('function.readMore') }}
                 </a>
-                </h3>
-            </article>
-            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
-                <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="absolute inset-0 -z-10 size-full object-cover">
-                <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40"></div>
-                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
-
-                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
-                <time datetime="2020-03-16" class="mr-8">Mar 16, 2020</time>
-                <div class="-ml-4 flex items-center gap-x-4">
-                    <svg viewBox="0 0 2 2" class="-ml-0.5 size-0.5 flex-none fill-white/50">
-                    <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <div class="flex gap-x-2.5">
-                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 flex-none rounded-full bg-white/10">
-                    Michael Foster
-                    </div>
-                </div>
-                </div>
-                <h3 class="mt-3 text-lg/6 font-semibold text-white">
-                <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Boost your conversion rate
-                </a>
-                </h3>
-            </article>
-            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
-                <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="absolute inset-0 -z-10 size-full object-cover">
-                <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40"></div>
-                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
-
-                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
-                <time datetime="2020-03-16" class="mr-8">Mar 16, 2020</time>
-                <div class="-ml-4 flex items-center gap-x-4">
-                    <svg viewBox="0 0 2 2" class="-ml-0.5 size-0.5 flex-none fill-white/50">
-                    <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <div class="flex gap-x-2.5">
-                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 flex-none rounded-full bg-white/10">
-                    Michael Foster
-                    </div>
-                </div>
-                </div>
-                <h3 class="mt-3 text-lg/6 font-semibold text-white">
-                <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Boost your conversion rate
-                </a>
-                </h3>
-            </article>
-
-            <!-- More posts... -->
             </div>
         </div>
+
+        <div class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            @php
+                $allProducts = __('product.product');
+                $products = is_array($allProducts) ? array_slice($allProducts, 0, 3) : [];
+            @endphp
+
+            @foreach ($products as $product)
+                <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 sm:pt-48 lg:pt-80">
+                    <img
+                        src="{{ asset($product['image']) }}"
+                        alt="{{ $product['name'] }}"
+                        class="absolute inset-0 -z-10 size-full object-cover"
+                    >
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                    <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
+
+                    <h3 class="mt-3 text-lg/6 font-semibold text-white">
+                        <a href="{{ route('product') }}">
+                            <span class="absolute inset-0"></span>
+                            {{ $product['name'] }}
+                        </a>
+                    </h3>
+                </article>
+            @endforeach
+        </div>
     </div>
+</div>
 
     <!-- Feature section -->
-    <div class="bg-white px-6 py-32 lg:px-8">
-        <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
-            <p class="text-base/7 font-semibold text-indigo-600">Features</p>
-            <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">WHY PT. ADHI CAHAYA GLOBAL?</h1>
-            <p class="mt-6 text-xl/8">Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget. Eleifend egestas fringilla sapien.</p>
-            <div class="mt-10 max-w-2xl">
-            <p>Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+<div class="bg-white px-6 py-32 lg:px-8">
+    <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
+        {{-- <p class="text-base/7 font-semibold text-green-700">Features</p> --}}
+        <h1 class="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{{ __('home.titleWhyChooseUs') }}</h1>
+
+        <div class="mt-10 max-w-2xl">
             <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
-                <li class="flex gap-x-3">
-                <svg class="mt-1 size-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">Data types.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
-                </li>
-                <li class="flex gap-x-3">
-                <svg class="mt-1 size-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">Loops.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
-                </li>
-                <li class="flex gap-x-3">
-                <svg class="mt-1 size-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">Events.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
-                </li>
+                @foreach(__('home.features') as $key => $feature)
+                    <li class="flex gap-x-3">
+                        <svg class="mt-1 size-5 flex-none text-green-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+                        </svg>
+                        <span>
+                            <strong class="font-semibold text-gray-900">{{ $feature['title'] }}</strong>
+                            {{ $feature['description'] }}
+                        </span>
+                    </li>
+                @endforeach
             </ul>
-            <p class="mt-8">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
-            <h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">From beginner to expert in 3 hours</h2>
-            <p class="mt-6">Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
-            <figure class="mt-10 border-l border-indigo-600 pl-9">
-                <blockquote class="font-semibold text-gray-900">
-                <p>“Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.”</p>
-                </blockquote>
-                <figcaption class="mt-6 flex gap-x-4">
-                <img class="size-6 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                <div class="text-sm/6"><strong class="font-semibold text-gray-900">Maria Hill</strong> – Marketing Manager</div>
-                </figcaption>
-            </figure>
-            <p class="mt-10">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.</p>
-            </div>
-            <figure class="mt-16">
-            <img class="aspect-video rounded-xl bg-gray-50 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3" alt="">
-            <figcaption class="mt-4 flex gap-x-2 text-sm/6 text-gray-500">
-                <svg class="mt-0.5 size-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
-                </svg>
-                Faucibus commodo massa rhoncus, volutpat.
-            </figcaption>
-            </figure>
-            <div class="mt-16 max-w-2xl">
-            <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900">Everything you need to get up and running</h2>
-            <p class="mt-6">Purus morbi dignissim senectus mattis adipiscing. Amet, massa quam varius orci dapibus volutpat cras. In amet eu ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut viverra ridiculus non molestie. Gravida quis fringilla amet eget dui tempor dignissim. Facilisis auctor venenatis varius nunc, congue erat ac. Cras fermentum convallis quam.</p>
-            <p class="mt-8">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.</p>
-            </div>
         </div>
     </div>
+</div>
 
 
 
 
 {{-- cta --}}
 <div class="bg-white">
-  <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+  <div class="px-6 py-2 sm:px-6 sm:py-10 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Ready to grow with us? Let’s talk.</h2>
-      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-600">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
+      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">{{ __('home.titleContact') }}</h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-600">{{ __('home.descriptionContact') }}</p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Ask For Offer</a>
+        <a href="#" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.askForOffer') }}</a>
       </div>
     </div>
   </div>
@@ -283,11 +216,40 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">From the blog</h2>
-      <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">{{ __('home.titleBlog') }}</h2>
     </div>
+    <a
+        href="{{ route('blog') }}"
+        class="flex justify-end text-end font-medium text-green-900 hover:text-green-700 underline"
+    >
+        {{ __('function.readMore') }}
+    </a>
     <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <article class="flex flex-col items-start justify-between">
+        @foreach ($blogs as $blog)
+            <article class="flex flex-col items-start justify-between">
+                <div class="relative w-full">
+                    <img src="{{ $blog->image }}" alt="" class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2">
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
+                </div>
+                <div class="max-w-xl">
+                    <div class="mt-8 flex items-center gap-x-4 text-xs">
+                        <time datetime="{{ $blog->updated_at->toISOString() }}" class="text-gray-500">
+                            {{ __('blog.lastUpdated') }} {{ $blog->updated_at->format('F j, Y') }}
+                        </time>
+                    </div>
+                <div class="group relative">
+                    <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                    <a href="#">
+                        <span class="absolute inset-0"></span>
+                        {{ $blog->translations->first()->title }}
+                    </a>
+                    </h3>
+                    <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">{{ Str::limit($blog->translations->first()->content, 150, '...') }}</p>
+                </div>
+                </div>
+            </article>
+        @endforeach
+      {{-- <article class="flex flex-col items-start justify-between">
         <div class="relative w-full">
           <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2">
           <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
@@ -295,7 +257,7 @@
         <div class="max-w-xl">
           <div class="mt-8 flex items-center gap-x-4 text-xs">
             <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            {{-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> --}}
+            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
           </div>
           <div class="group relative">
             <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
@@ -306,7 +268,7 @@
             </h3>
             <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
           </div>
-          {{-- <div class="relative mt-8 flex items-center gap-x-4">
+          <div class="relative mt-8 flex items-center gap-x-4">
             <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-100">
             <div class="text-sm/6">
               <p class="font-semibold text-gray-900">
@@ -317,272 +279,134 @@
               </p>
               <p class="text-gray-600">Co-Founder / CTO</p>
             </div>
-          </div> --}}
-        </div>
-      </article>
-      <article class="flex flex-col items-start justify-between">
-        <div class="relative w-full">
-          <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2">
-          <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
-        </div>
-        <div class="max-w-xl">
-          <div class="mt-8 flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            {{-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> --}}
           </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Boost your conversion rate
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          {{-- <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-100">
-            <div class="text-sm/6">
-              <p class="font-semibold text-gray-900">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-600">Co-Founder / CTO</p>
-            </div>
-          </div> --}}
         </div>
-      </article>
-      <article class="flex flex-col items-start justify-between">
-        <div class="relative w-full">
-          <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2">
-          <div class="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
-        </div>
-        <div class="max-w-xl">
-          <div class="mt-8 flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            {{-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> --}}
-          </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Boost your conversion rate
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          {{-- <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-100">
-            <div class="text-sm/6">
-              <p class="font-semibold text-gray-900">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-600">Co-Founder / CTO</p>
-            </div>
-          </div> --}}
-        </div>
-      </article>
-
+      </article> --}}
     </div>
   </div>
 </div>
 
 
 {{-- team --}}
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Our team</h2>
-      <p class="mt-6 text-lg/8 text-gray-600">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+{{-- <div class="bg-white py-10 sm:py-10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{ __('home.titleTeam') }}</h2>
+        <p class="mt-6 text-lg/8 text-gray-600">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+        </div>
+        <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <li>
+            <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+            <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
+            <p class="text-base/7 text-gray-600">CEO</p>
+            <ul role="list" class="mt-6 flex gap-x-6">
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">X</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                </svg>
+                </a>
+            </li>
+            </ul>
+        </li>
+        <li>
+            <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+            <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
+            <p class="text-base/7 text-gray-600">CFO</p>
+            <ul role="list" class="mt-6 flex gap-x-6">
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">X</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                </svg>
+                </a>
+            </li>
+            </ul>
+        </li>
+        <li>
+            <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+            <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
+            <p class="text-base/7 text-gray-600">COO</p>
+            <ul role="list" class="mt-6 flex gap-x-6">
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">X</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                </svg>
+                </a>
+            </li>
+            </ul>
+        </li>
+
+        </ul>
     </div>
-    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      <li>
-        <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-        <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
-        <p class="text-base/7 text-gray-600">Front-end Developer</p>
-        <ul role="list" class="mt-6 flex gap-x-6">
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">X</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">LinkedIn</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-        <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
-        <p class="text-base/7 text-gray-600">Front-end Developer</p>
-        <ul role="list" class="mt-6 flex gap-x-6">
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">X</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">LinkedIn</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <img class="aspect-3/2 w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-        <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">Lindsay Walton</h3>
-        <p class="text-base/7 text-gray-600">Front-end Developer</p>
-        <ul role="list" class="mt-6 flex gap-x-6">
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">X</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">LinkedIn</span>
-              <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <!-- More people... -->
-    </ul>
-  </div>
-</div>
-
-
-
-
-
+</div> --}}
 
 
     <!-- FAQ section -->
-    <div class="mx-auto my-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-            <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Frequently asked questions</h2>
-            <dl class="mt-16 divide-y divide-gray-900/10">
-                <div class="py-6 first:pt-0 last:pb-0">
-                    <dt class="">
-                    <button type="button" class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer"" aria-controls="faq-answer-0" aria-expanded="false" data-faq-target="0">
-                        <span class="text-base/7 font-semibold">What's the best thing about Switzerland?</span>
-                        <span class="ml-6 flex h-7 items-center">
-                        <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                        </span>
-                    </button>
-                    </dt>
-                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-0">
-                    <p class="text-base/7 text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
-                    </dd>
-                </div>
+<div class="mx-auto my-32 max-w-7xl px-6 sm:mt-28 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+        <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            {{ __('home.faq.title') }}
+        </h2>
 
+        <dl class="mt-16 divide-y divide-gray-900/10">
+            @foreach(__('home.faq') as $key => $faq)
+                @if($key !== 'title') <!-- Skip title key -->
                 <div class="py-6 first:pt-0 last:pb-0">
                     <dt>
-                    <button type="button" class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer" aria-controls="faq-answer-1" aria-expanded="false" data-faq-target="1">
-                        <span class="text-base/7 font-semibold">How do I apply for a job?</span>
-                        <span class="ml-6 flex h-7 items-center">
-                        <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                        </span>
-                    </button>
+                        <button type="button"
+                                class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer"
+                                aria-controls="faq-answer-{{ $loop->index }}"
+                                aria-expanded="false"
+                                data-faq-target="{{ $loop->index }}">
+                            <span class="text-base/7 font-semibold">{{ $faq['question'] }}</span>
+                            <span class="ml-6 flex h-7 items-center">
+                                <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                </svg>
+                                <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                </svg>
+                            </span>
+                        </button>
                     </dt>
-                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-1">
-                    <p class="text-base/7 text-gray-600">Visit our careers page and submit your application through the online portal.</p>
+                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-{{ $loop->index }}">
+                        <p class="text-base/7 text-gray-600">{{ $faq['answer'] }}</p>
                     </dd>
                 </div>
-
-                <div class="py-6 first:pt-0 last:pb-0">
-                    <dt>
-                    <button type="button" class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer" aria-controls="faq-answer-1" aria-expanded="false" data-faq-target="1">
-                        <span class="text-base/7 font-semibold">How do I apply for a job?</span>
-                        <span class="ml-6 flex h-7 items-center">
-                        <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                        </span>
-                    </button>
-                    </dt>
-                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-1">
-                    <p class="text-base/7 text-gray-600">Visit our careers page and submit your application through the online portal.</p>
-                    </dd>
-                </div>
-
-                <div class="py-6 first:pt-0 last:pb-0">
-                    <dt>
-                    <button type="button" class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer" aria-controls="faq-answer-1" aria-expanded="false" data-faq-target="1">
-                        <span class="text-base/7 font-semibold">How do I apply for a job?</span>
-                        <span class="ml-6 flex h-7 items-center">
-                        <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                        </span>
-                    </button>
-                    </dt>
-                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-1">
-                    <p class="text-base/7 text-gray-600">Visit our careers page and submit your application through the online portal.</p>
-                    </dd>
-                </div>
-
-                <div class="py-6 first:pt-0 last:pb-0">
-                    <dt>
-                    <button type="button" class="faq-toggle flex w-full items-start justify-between text-left text-gray-900 hover:cursor-pointer" aria-controls="faq-answer-1" aria-expanded="false" data-faq-target="1">
-                        <span class="text-base/7 font-semibold">How do I apply for a job?</span>
-                        <span class="ml-6 flex h-7 items-center">
-                        <svg class="faq-icon-plus size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg class="faq-icon-minus hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                        </span>
-                    </button>
-                    </dt>
-                    <dd class="faq-answer mt-2 pr-12 hidden" id="faq-answer-1">
-                    <p class="text-base/7 text-gray-600">Visit our careers page and submit your application through the online portal.</p>
-                    </dd>
-                </div>
-            </dl>
-        </div>
+                @endif
+            @endforeach
+        </dl>
     </div>
+</div>
   </main>
 
 @endsection

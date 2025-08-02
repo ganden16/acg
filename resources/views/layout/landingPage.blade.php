@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +66,7 @@
   <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between lg:px-8" style="background-color: #7a8450">
     <div class="flex lg:flex-1">
       <a href="#" class="p-2 md:me-10">
-        <img src="{{ asset('assets1/images/logo/acg2-rem.png') }}" alt="p-0 m-0" class="w-20" />
+        <img src="{{ asset('assets1/images/logo/acg-5.png') }}" alt="Logo PT. ACG" class="w-40" />
         {{-- <img src="{{ asset('assets1/images/logo-rb-2.png') }}" alt="p-0 m-0" class="w-20" /> --}}
       </a>
     </div>
@@ -79,16 +79,16 @@
       </button>
     </div>
     <el-popover-group class="hidden md:flex md:gap-x-12">
-      <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Home</a>
-      <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">About</a>
-      <a href="{{ route('product') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Product</a>
-      <a href="{{ route('blog') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Blog</a>
-      <a href="{{ route('contact') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">Contact</a>
+      <a href="{{ route('home') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">{{ __('layout.home') }}</a>
+      <a href="{{ route('about') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">{{ __('layout.about') }}</a>
+      <a href="{{ route('product') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">{{ __('layout.product') }}</a>
+      <a href="{{ route('blog') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">{{ __('layout.blog') }}</a>
+      <a href="{{ route('contact') }}" class="text-sm/6 font-semibold text-gray-100 hover:text-gray-400">{{ __('layout.contact') }}</a>
     </el-popover-group>
     <div class="hidden md:flex md:flex-1 md:justify-end">
       <div class="relative">
         <button popovertarget="desktop-menu-language" class="flex items-center cursor-pointer gap-x-1 text-sm/6 font-semibold text-gray-100 hover:text-gray-400">
-            Language
+            {{ __('layout.language') }}
             <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-400">
             <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
             </svg>
@@ -101,10 +101,10 @@
             popover
             class="w-screen max-w-md overflow-hidden rounded-3xl bg-gray-800 shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
             <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-200">
+            <a href="{{ route('language.switch', ['lang' => 'id']) }}" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-200">
                 Indonesia
             </a>
-            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-200">
+            <a href="{{ route('language.switch', ['lang' => 'en']) }}" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-200">
                 English
             </a>
             </div>
@@ -118,7 +118,7 @@
         <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+              <span class="sr-only">Your Logo Company</span>
               <img src="{{ asset('assets1/images/logo/acg2-rem.png') }}" alt="Logo ACG" class="h-10" />
             </a>
             <button type="button" command="close" commandfor="mobile-menu" class="cursor-pointer -m-2.5 rounded-md p-2.5 text-gray-700">
@@ -131,23 +131,23 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-3 py-6">
-                <a href="#" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">Home</a>
-                <a href="#" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">About</a>
-                <a href="#" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">Product</a>
-                <a href="#" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">Blog</a>
-                <a href="#" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">Contact</a>
+                <a href="{{ route('home') }}" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">{{ __('layout.home') }}</a>
+                <a href="{{ route('about') }}" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">{{ __('layout.about') }}</a>
+                <a href="{{ route('product') }}" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">{{ __('layout.product') }}</a>
+                <a href="{{ route('blog') }}" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">{{ __('layout.blog') }}</a>
+                <a href="{{ route('contact') }}" class="-mx-3 block rounded-lg text-center px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-100">{{ __('layout.contact') }}</a>
               </div>
               <div class="py-6">
                 <div class="-mx-3">
                   <button type="button" command="--toggle" commandfor="products" class="cursor-pointer flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Language
+                    {{ __('layout.language') }}
                     <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
                       <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                     </svg>
                   </button>
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
-                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-100">Indonesia</a>
-                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-100">English</a>
+                    <a href="{{ route('language.switch', 'id') }}" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-100">Indonesia</a>
+                    <a href="{{ route('language.switch', 'en') }}" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-100">English</a>
                   </el-disclosure>
                 </div>
               </div>
@@ -174,12 +174,12 @@
   <!-- Footer -->
 <footer class="" style="background-color: #7a8450">
   <div class="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-12 lg:px-8">
-    <nav class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
-      <a href="{{ route('home') }}" class="text-gray-100 hover:text-gray-400">Home</a>
-      <a href="{{ route('about') }}" class="text-gray-100 hover:text-gray-400">About</a>
-      <a href="{{ route('product') }}" class="text-gray-100 hover:text-gray-400">Product</a>
-      <a href="{{ route('blog') }}" class="text-gray-100 hover:text-gray-400">Blog</a>
-      <a href="{{ route('contact') }}" class="text-gray-100 hover:text-gray-400">Contact</a>
+    <nav class="-mb-6 flex flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
+      <a href="{{ route('home') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.home') }}</a>
+      <a href="{{ route('about') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.about') }}</a>
+      <a href="{{ route('product') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.product') }}</a>
+      <a href="{{ route('blog') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.blog') }}</a>
+      <a href="{{ route('contact') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.contact') }}</a>
     </nav>
     <div class="mt-16 flex justify-center gap-x-10">
         <a href="tel:+62881082048368" class="text-gray-100 hover:text-gray-400">
@@ -229,7 +229,7 @@
       </a>
     </div> --}}
     <p class="mt-10 text-center text-sm/6 text-gray-100"><i class="fa-solid fa-location-dot"></i>  Mojosulur, Mojosari, Kab. Mojokerto, Jawa Timur. 61382</p>
-    <p class="mt-8 text-center text-sm/6 text-gray-100">&copy; 2025 PT. ADHI CAHAYA GLOBAL. All rights reserved.</p>
+    <p class="mt-8 text-center text-sm/6 text-gray-100">&copy; 2025 PT. ADHI CAHAYA GLOBAL. {{ __('layout.copyright') }}</p>
   </div>
 </footer>
 
