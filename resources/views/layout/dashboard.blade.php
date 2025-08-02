@@ -83,7 +83,7 @@
 <!-- [Mobile Media Block end] -->
 <div class="ms-auto">
   <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
-    <li class="dropdown pc-h-item">
+    {{-- <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
         <i data-feather="sun"></i>
@@ -98,7 +98,7 @@
           <span>Light</span>
         </a>
       </div>
-    </li>
+    </li> --}}
     <li class="dropdown pc-h-item header-user-profile">
       <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">
