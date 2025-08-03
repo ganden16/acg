@@ -41,7 +41,7 @@
                 {{ $loop->iteration }}
               </td>
               <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 lg:pl-8">
-                {{ $blog->title }}
+                {{ $blog->translation_id->title }}
               </td>
               <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
                 {{ $blog->slug }}
@@ -71,6 +71,12 @@
         </table>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="mt-10 px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-center">
+    {{ $blogs->links() }}
   </div>
 </div>
 

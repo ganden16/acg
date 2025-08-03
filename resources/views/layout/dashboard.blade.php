@@ -34,7 +34,9 @@
  <!-- [ Sidebar Menu ] start -->
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
-    <img src="{{ asset('assets1/images/acg-1.png') }}" class="w-30 mt-5" alt="logo" />
+    <a href="{{ route('home') }}" class="">
+        <img src="{{ asset('assets1/images/acg-1.png') }}" class="w-30 mt-5" alt="logo" />
+    </a>
     <div class="navbar-content h-[calc(100vh_-_74px)] py-2.5">
       <ul class="pc-navbar">
         <li class="pc-item pc-caption">
@@ -61,6 +63,7 @@
     </div>
   </div>
 </nav>
+
 <!-- [ Sidebar Menu ] end -->
  <!-- [ Header Topbar ] start -->
 <header class="pc-header">
@@ -108,7 +111,9 @@
         <div class="dropdown-header flex items-center justify-between py-4 px-5 bg-primary-500">
           <div class="flex mb-1 items-center">
             <div class="shrink-0">
-              <img src="{{ asset('assets1/images/user/avatar-2.jpg') }}" alt="user-image" class="w-10 rounded-full" />
+              <a href="{{ route('home') }}" class="">
+                <img src="{{ asset('assets1/images/user/avatar-2.jpg') }}" alt="user-image" class="w-10 rounded-full" />
+              </a>
             </div>
             <div class="grow ms-3">
               <h6 class="mb-1 text-white">{{ auth()->user()->username }}</h6>

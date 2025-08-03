@@ -5,4 +5,5 @@ return [
     'contactUs' => 'Hubungi Kami',
     'readMore' => 'Selengkapnya...',
     'sendMessage' => 'Kirim Pesan',
+    'learnMore' => 'Pelajari Lebih Lanjut',
 ];

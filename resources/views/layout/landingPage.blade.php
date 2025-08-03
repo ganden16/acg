@@ -65,7 +65,7 @@
 <header class="opacity-90" style="background-color: #fafaf5">
   <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between lg:px-8" style="background-color: #7a8450">
     <div class="flex lg:flex-1">
-      <a href="#" class="p-2 md:me-10">
+      <a href="{{ route('home') }}" class="p-2 md:me-10">
         <img src="{{ asset('assets1/images/logo/acg-5.png') }}" alt="Logo PT. ACG" class="w-40" />
         {{-- <img src="{{ asset('assets1/images/logo-rb-2.png') }}" alt="p-0 m-0" class="w-20" /> --}}
       </a>
@@ -117,7 +117,7 @@
       <div tabindex="0" class="fixed inset-0 focus:outline-none">
         <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="{{ route('home') }}" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Logo Company</span>
               <img src="{{ asset('assets1/images/logo/acg2-rem.png') }}" alt="Logo ACG" class="h-10" />
             </a>
@@ -174,7 +174,7 @@
   <!-- Footer -->
 <footer class="" style="background-color: #7a8450">
   <div class="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-12 lg:px-8">
-    <nav class="-mb-6 flex flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
+    <nav class="-mb-6 flex flex-wrap justify-center gap-x-5 md:gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
       <a href="{{ route('home') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.home') }}</a>
       <a href="{{ route('about') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.about') }}</a>
       <a href="{{ route('product') }}" class="text-gray-100 hover:text-gray-400">{{ __('layout.product') }}</a>

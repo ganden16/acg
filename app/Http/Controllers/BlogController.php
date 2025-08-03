@@ -17,17 +17,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::join(new BlogTranslation()->getTable().' as bt' , 'blogs.id', '=', 'bt.blog_id')
-            ->select(
-                'blogs.id as id',
-                'blogs.image as image',
-                'blogs.slug as slug',
-                'bt.title as title',
-                'bt.subtitle as subtitle'
-            )
-            ->where('bt.lang', 'id')
-            ->orderBy('blogs.updated_at', 'desc')
-            ->get();
+        $blogs = Blog::with('translation_id')
+                ->orderBy('updated_at', 'desc')
+                ->paginate(7);
 
         return view('dashboard.blog.index', compact('blogs'));
     }

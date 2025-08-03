@@ -5,4 +5,5 @@ return [
     'contactUs' => 'Contact Us',
     'readMore' => 'Read More...',
     'sendMessage' => 'Send Message',
+    'learnMore' => 'Learn More',
 ];
