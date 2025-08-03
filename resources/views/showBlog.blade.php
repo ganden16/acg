@@ -18,7 +18,9 @@
               </h5>
           </header>
           <figure><img src="{{ $blog->image }}" alt="{{ $blog->translations->first()->title }}" class="mb-4 rounded-lg">
-        <h5 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">{{ $blog->translations->first()->subtitle }}</h5>
+            @if (isset($blog->translations->first()->subtitle))
+                <h5 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">{{ $blog->translations->first()->subtitle }}</h5>
+            @endif
         <p class="lead">
             {{ $blog->translations->first()->content }}
         </p>
