@@ -53,4 +53,26 @@ class PageController extends Controller
 
         return redirect()->back();
     }
+
+    public function showBlog(Blog $blog)
+    {
+        $lang = app()->getLocale() ?? 'en';
+
+        $blog->load([
+            'translations' => function ($query) use ($lang) {
+                $query->where('lang', $lang);
+            },
+        ]);
+
+        $randomFourBlogs = Blog::with([
+            'translations' => function ($query) use ($lang) {
+                $query->where('lang', $lang);
+            },
+        ])
+        ->inRandomOrder()
+        ->take(4)
+        ->get();
+
+        return view('showBlog', compact('blog', 'randomFourBlogs'));
+    }
 }

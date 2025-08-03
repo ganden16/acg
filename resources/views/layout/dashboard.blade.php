@@ -183,6 +183,7 @@
 
         <!-- [ Main Content ] start -->
         @yield('content')
+        @yield('pagination')
         <!-- [ Main Content ] end -->
       </div>
 </div>

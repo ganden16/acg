@@ -6,4 +6,5 @@ return [
     'readMore' => 'Selengkapnya...',
     'sendMessage' => 'Kirim Pesan',
     'learnMore' => 'Pelajari Lebih Lanjut',
+    'otherArticles' => 'Artikel Lainnya',
 ];

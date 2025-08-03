@@ -93,11 +93,18 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blog $blog)
-    {
-        $blog->load('translations');
-        return view('dashboard.blog.show', compact('blog'));
-    }
+    // public function show(Blog $blog)
+    // {
+    //     $lang = app()->getLocale() ?? 'en';
+
+    //     if( $lang === 'id') {
+    //         $blog->load('translation_id');
+    //     } else {
+    //         $blog->load('translation_en');
+    //     }
+
+    //     return view('dashboard.blog.show', compact('blog'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -177,4 +184,5 @@ class BlogController extends Controller
         $blog->delete();
         return redirect()->route('dashboard.blog.index')->with('success-delete', 'Blog has been deleted successfully.');
     }
+
 }

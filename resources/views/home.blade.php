@@ -15,7 +15,7 @@
                             Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                         </div>
                     </div> --}}
-                    <h1 class="mt-24 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:mt-10 sm:text-7xl">PT. Adhi Cahaya Global</h1>
+                    <h1 class="mt-24 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:mt-10">PT. Adhi Cahaya Global</h1>
                     <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Your Reliable Partner for Ethical Trade & Authentic Indonesian Commodities</p>
                     <div class="mt-10 flex items-center gap-x-6">
                         <a href="https://wa.me/62881082048368" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.askForOffer') }}</a>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="relative mt-6 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 ">
-                <img class="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full rounded-2xl" src="{{ asset('assets1/images/landingPage/picture4.png') }}" alt="">
+                <img class="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto rounded-2xl" src="{{ asset('assets1/images/landingPage/picture4.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
       <div class="lg:flex lg:items-start lg:justify-between gap-x-10">
         <!-- Content Section -->
         <div class="w-full lg:w-1/2 space-y-6">
-            <h1 class="font-semibold tracking-tight text-gray-900 text-5xl sm:text-6xl">{{ __('home.titleAbout') }}</h1>
+            <h1 class="font-semibold tracking-tight text-gray-900 text-5xl">{{ __('home.titleAbout') }}</h1>
             <p class="text-lg font-medium text-gray-500 sm:text-xl/8 lg:max-w-none">
                 {{ __('home.descriptionAbout') }}
             </p>
@@ -99,7 +99,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-6">
             <div class="max-w-2xl">
-                <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
+                <h2 class="text-5xl font-semibold tracking-tight text-balance text-gray-900">
                     {{ __('home.titleProduct') }}
                 </h2>
                 <p class="mt-2 text-lg/8 text-gray-600">
@@ -150,7 +150,7 @@
 <div class="bg-white px-6 py-32 lg:px-8">
     <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
         {{-- <p class="text-base/7 font-semibold text-green-700">Features</p> --}}
-        <h1 class="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{{ __('home.titleWhyChooseUs') }}</h1>
+        <h1 class="mt-2 text-5xl font-semibold tracking-tight text-gray-900">{{ __('home.titleWhyChooseUs') }}</h1>
 
         <div class="mt-10 max-w-2xl">
             <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
@@ -177,7 +177,7 @@
 <div class="bg-white">
   <div class="px-6 py-2 sm:px-6 sm:py-10 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">{{ __('home.titleContact') }}</h2>
+      <h2 class="text-5xl font-semibold tracking-tight text-balance text-gray-900">{{ __('home.titleContact') }}</h2>
       <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-600">{{ __('home.descriptionContact') }}</p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <a href="#" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.askForOffer') }}</a>
@@ -191,7 +191,7 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">{{ __('home.titleBlog') }}</h2>
+      <h2 class="text-5xl font-semibold tracking-tight text-balance text-gray-900">{{ __('home.titleBlog') }}</h2>
     </div>
     <a
         href="{{ route('blog') }}"
@@ -214,7 +214,7 @@
                     </div>
                 <div class="group relative">
                     <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                    <a href="#">
+                    <a href="{{ route('blog.show', $blog->slug) }}">
                         <span class="absolute inset-0"></span>
                         {{ $blog->translations->first()->title }}
                     </a>
@@ -348,7 +348,7 @@
     <!-- FAQ section -->
 <div class="mx-auto my-32 max-w-7xl px-6 sm:mt-28 lg:px-8">
     <div class="mx-auto max-w-4xl">
-        <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+        <h2 class="text-5xl font-semibold tracking-tight text-gray-900">
             {{ __('home.faq.title') }}
         </h2>
 

@@ -60,7 +60,7 @@
             </div>
             <div class="group relative max-w-xl">
               <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                <a href="#">
+                <a href="{{ route('blog.show', $blog->slug) }}" class="relative z-10">
                   <span class="absolute inset-0"></span>
                  {{ $blog->translations->first()->title }}
                 </a>
@@ -68,7 +68,7 @@
               <p class="mt-5 text-sm/6 text-gray-600">{{ Str::limit($blog->translations->first()->content, 200, '...') }}</p>
             </div>
             <div class="mt-6 flex border-t border-gray-900/5 pt-6">
-              <a href type="button" class="rounded-md bg-lime-600 px-3.5 py-2.5 text-sm font-semibold text-gray-100 shadow-xs hover:bg-lime-700">Read More...</a>
+              <a href="{{ route('blog.show', ['blog' => $blog->slug]) }}" type="button" class="rounded-md bg-lime-600 px-3.5 py-2.5 text-sm font-semibold text-gray-100 shadow-xs hover:bg-lime-700">Read More...</a>
             </div>
           </div>
         </article>

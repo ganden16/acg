@@ -38,7 +38,7 @@
             @forelse ($blogs as $blog)
             <tr>
               <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 lg:pl-8">
-                {{ $loop->iteration }}
+                {{ $blogs->firstItem() + $loop->index }}
               </td>
               <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 lg:pl-8">
                 {{ $blog->translation_id->title }}
@@ -74,11 +74,44 @@
   </div>
 </div>
 
-<div class="mt-10 px-4 sm:px-6 lg:px-8">
-  <div class="flex justify-center">
-    {{ $blogs->links() }}
+@section('pagination')
+<div class="mt-12 px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <!-- Informasi Halaman -->
+    <div class="text-sm text-gray-700">
+      Showing
+      <span class="font-medium">{{ $blogs->firstItem() }}</span>
+      to
+      <span class="font-medium">{{ $blogs->lastItem() }}</span>
+      of
+      <span class="font-medium">{{ $blogs->total() }}</span>
+      results
+    </div>
+
+    <!-- Navigasi Halaman -->
+    <nav class="flex gap-2">
+      <!-- Tombol Previous -->
+      @if ($blogs->onFirstPage())
+        <span class="px-3 py-1 text-sm text-gray-400 bg-gray-100 rounded-md cursor-not-allowed">Sebelumnya</span>
+      @else
+        <a href="{{ $blogs->previousPageUrl() }}" class="px-3 py-1 text-sm text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Sebelumnya</a>
+      @endif
+
+      <!-- Halaman Sekarang -->
+      <span class="px-3 py-1 text-sm font-medium text-white bg-indigo-600 rounded-md">
+        Halaman {{ $blogs->currentPage() }}
+      </span>
+
+      <!-- Tombol Next -->
+      @if ($blogs->hasMorePages())
+        <a href="{{ $blogs->nextPageUrl() }}" class="px-3 py-1 text-sm text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Berikutnya</a>
+      @else
+        <span class="px-3 py-1 text-sm text-gray-400 bg-gray-100 rounded-md cursor-not-allowed">Berikutnya</span>
+      @endif
+    </nav>
   </div>
 </div>
+@endsection
 
 @if(session()->has('success-delete'))
 <div id="success-modal-delete" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">

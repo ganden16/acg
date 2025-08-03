@@ -31,6 +31,8 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
     Route::put('change-password', [AuthController::class, 'changePassword'])->name('change-password.update');
 });
 
+Route::get('/blog/{blog}', [PageController::class, 'showBlog'])->name('blog.show');
+
 Route::get('/language/{lang}', [PageController::class, 'changeLanguage'])->name('language.switch');
 
 

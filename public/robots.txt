@@ -1,2 +1,13 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Peta Situs
+Sitemap: http://adhicahayaglobal.com/sitemap.xml
+
+# Cegah crawl area admin
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /logout
+
+# Cegah crawl parameter (jika pakai)
+Disallow: /*?*
