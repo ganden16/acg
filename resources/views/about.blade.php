@@ -47,10 +47,10 @@
                     <!-- Content Section -->
                     <div class="w-full lg:w-1/2 space-y-6">
                         <h1 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">{{ __('about.titleAbout') }}</h1>
-                        <p class="mt-8 text-base font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                        <p class="mt-8 text-base font-medium text-gray-500 sm:max-w-md sm:text-xl/8 md:max-w-none">
                             {{ __('about.descriptionAbout1') }}
                         </p>
-                        <p class="mt-8 text-base font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                        <p class="mt-8 text-base font-medium text-gray-500 sm:max-w-md sm:text-xl/8 md:max-w-none">
                             {{ __('about.descriptionAbout2') }}
                         </p>
                     </div>

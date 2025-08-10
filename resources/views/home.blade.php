@@ -9,7 +9,9 @@
         <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
             <div class="px-6 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 pt-5 lg:pb-48 xl:col-span-6">
                 <div class="mx-auto max-w-lg lg:mx-0">
-                    <img class="h-11" src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="PT. Adhi Cahaya Global"">
+                    <div class="flex justify-center">
+							<img class="h-40" src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="PT. Adhi Cahaya Global">
+						  </div>
                     {{-- <div class="hidden sm:mt-32 md:mt-1 sm:flex lg:mt-16">
                         <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                             Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
