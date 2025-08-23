@@ -1,6 +1,6 @@
 @extends('layout.landingPage')
 
-@section('title', 'Blog | ACG')
+{{-- @section('title', 'Blogs  - PT. Adhi Cahaya Global') --}}
 
 @section('content')
 <div class="relative isolate overflow-hidden bg-gray-900 pt-14 pb-16 sm:pb-20">

@@ -1,6 +1,6 @@
 @extends('layout.dashboard')
 
-@section('title', 'Dashboard Edit Blog | ACG') {{-- Perbaikan title --}}
+@section('title', 'Dashboard Edit Blog | PT. Adhi Cahaya Global')
 
 @section('li-breadcrumb')
 <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>

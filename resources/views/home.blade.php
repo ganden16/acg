@@ -1,6 +1,7 @@
 @extends('layout.landingPage')
 
-@section('title', 'Home | ACG')
+{{-- @section('title', 'Your Reliable Partner for Ethical Trade & Authentic Indonesian Commodities - PT. Adhi Cahaya Global') --}}
+
 @section('content')
 
  <main class="isolate">

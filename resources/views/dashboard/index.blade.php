@@ -1,6 +1,6 @@
 @extends('layout.dashboard')
 
-@section('title', 'Dashboard | ACG')
+@section('title', 'Dashboard Admin - PT. Adhi Cahaya Global')
 
 @section('link-meta')
 <link rel="stylesheet" href="{{ asset('assets1/fonts/phosphor/duotone/style.css') }}" />

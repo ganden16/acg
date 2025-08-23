@@ -6,7 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('assets1/images/logo/acg4.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>@yield('title', 'ACG')</title>
+	 <link rel="canonical" href="{{ url()->current() }}" />
+	 <meta name="description" content="{{ $description ?? 'PT Adhi Cahaya Global: Reliable exporter of authentic Indonesian spices, herbs, and agro commodities.' }}">
+	 
+	 <meta name="robots" content="index, follow">
+	 <meta name="author" content="PT Adhi Cahaya Global">
+
+	<!-- Open Graph / Social Sharing -->
+	<meta property="og:title" content="{{ $title ?? 'PT. Adhi Cahaya Global' }}">
+	<meta property="og:description" content="{{ $description ?? 'PT Adhi Cahaya Global: Reliable exporter of authentic Indonesian spices, herbs, and agro commodities.' }}">
+	<meta property="og:url" content="{{ url()->current() }}">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="PT Adhi Cahaya Global">
+	<meta property="og:image" content="{{ asset('assets1/images/logo/acg4-rb.png') }}">
+	<meta property="og:image:alt" content="PT Adhi Cahaya Global - Exporter of Indonesian Spices & Agro Commodities">
+
+	<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title ?? 'PT. Adhi Cahaya Global' }}">
+    <meta name="twitter:description" content="{{ $description ?? 'PT Adhi Cahaya Global: Reliable exporter of authentic Indonesian spices, herbs, and agro commodities.' }}">
+    <meta name="twitter:image" content="{{ asset('assets1/images/logo/acg4-rb.png') }}">
+    <meta name="twitter:site" content="@adhicahayaglobal">
+
+	<script type="application/ld+json">
+		{
+			"@@context": "https://schema.org",
+			"@@type": "Organization",
+			"name": "PT Adhi Cahaya Global",
+			"url": "https://adhicahayaglobal.com",
+			"logo": "{{ asset('assets1/images/logo/acg4-rb.png') }}",
+			"description": "Your reliable partner for exporting authentic Indonesian spices, herbs, and agro commodities. Sustainably sourced, export-grade quality, direct from farmers in East Java.",
+			"address": {
+				"@@type": "PostalAddress",
+				"streetAddress": "Mojosulur, Mojosari",
+				"addressLocality": "Kab. Mojokerto",
+				"addressRegion": "East Java",
+				"postalCode": "61382",
+				"addressCountry": "ID"
+			},
+			"contactPoint": {
+				"@@type": "ContactPoint",
+				"telephone": "+62881082048368",
+				"contactType": "Export Inquiry",
+				"areaServed": "Worldwide",
+				"availableLanguage": "English"
+			},
+			"sameAs": [
+				"https://www.linkedin.com/company/pt-adhi-cahaya-global",
+				"mailto:pt.adhicahayaglobal@gmail.com"
+			]
+		}
+	</script>
+
+	<title>{{ $title ?? 'PT. Adhi Cahaya Global' }}</title>
+
     <style>
         /* WhatsApp Floating Button */
         .whatsapp-float-button {
@@ -238,9 +291,6 @@
 
 </div>
 
-<script>
-
-</script>
 <!-- Tambahkan script ini jika belum ada -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Peta Situs
-Sitemap: http://adhicahayaglobal.com/sitemap.xml
+Sitemap: https://adhicahayaglobal.com/sitemap.xml
 
 # Cegah crawl area admin
 Disallow: /dashboard/

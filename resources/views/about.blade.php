@@ -1,6 +1,6 @@
 @extends('layout.landingPage')
 
-@section('title', 'About Us | ACG')
+{{-- @section('title', 'About Us - PT. Adhi Cahaya Global') --}}
 @section('content')
 <div class="relative isolate overflow-hidden bg-gray-900 pt-14 pb-16 sm:pb-20">
       <img src="{{ asset('assets1/images/landingPage/picture2.png') }}" alt="about-us" class="absolute opacity-30 inset-0 -z-10 size-full object-cover">

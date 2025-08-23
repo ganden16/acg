@@ -3,7 +3,7 @@
   <!-- [Head] start -->
 
   <head>
-    <title>Login | ACG</title>
+    <title>Login - PT. Adhi Cahaya Global</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <link rel="stylesheet" href="{{ asset('assets1/fonts/feather.css') }}" />

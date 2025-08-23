@@ -83,23 +83,7 @@ class DatabaseSeeder extends Seeder
                 'content' => "Indonesia memiliki potensi besar sebagai lumbung pangan dan rempah dunia. Namun, tantangan seperti perubahan iklim, keterbatasan akses pasar, dan kurangnya teknologi masih menghambat petani kecil.\n\nPT Adhi Cahaya Global percaya bahwa masa depan pertanian harus berkelanjutan, inklusif, dan berorientasi ekspor. Kami mendukung petani dengan akses ke pasar global, pelatihan praktik ramah lingkungan, dan sistem pembayaran yang adil.\n\nKami juga mendorong penggunaan kemasan ramah lingkungan, pengurangan limbah, dan pengelolaan sumber daya alam yang bijaksana. Setiap komoditas yang kami ekspor harus meninggalkan jejak ekologis yang minimal.\n\nDengan memadukan tradisi, teknologi, dan etika bisnis, kami yakin pertanian Indonesia bisa bersaing di dunia. Bukan hanya sebagai penjual, tapi sebagai pemimpin dalam perdagangan komoditas alami yang bertanggung jawab."
             ],
         ];
-
-        foreach ($blogsData as $index => $data) {
-            $blog = Blog::create([
-                'slug' => Str::slug($data['title']),
-                'image' => env('APP_URL', 'http://localhost') . '/storage/images/blogs/blog' . ($index + 1) . '.jpg',
-            ]);
-
-            $blog->translations()->create([
-                'lang' => 'id',
-                'title' => $data['title'],
-                'subtitle' => $data['subtitle'],
-                'content' => $data['content'],
-            ]);
-        }
-
-        $blogs = Blog::all();
-        $enData = [
+		  $enData = [
             [
                 'title' => 'Cloves: Indonesia’s Aromatic Gold',
                 'subtitle' => 'Discover the history, benefits, and export potential of Indonesian cloves loved worldwide.',
@@ -152,13 +136,30 @@ class DatabaseSeeder extends Seeder
             ],
         ];
 
-        foreach ($blogs as $index => $blog) {
-            $blog->translations()->create([
-                'lang' => 'en',
-                'title' => $enData[$index]['title'],
-                'subtitle' => $enData[$index]['subtitle'],
-                'content' => $enData[$index]['content'],
-            ]);
-        }
+        foreach ($enData as $index => $data) {
+			// Gunakan judul bahasa Inggris untuk membuat slug
+			$slug = Str::slug($data['title']);
+
+			$blog = Blog::create([
+				'slug' => $slug,
+				'image' => env('APP_URL', 'http://localhost') . '/storage/images/blogs/blog' . ($index + 1) . '.jpg',
+			]);
+
+			// Terjemahan bahasa Indonesia
+			$blog->translations()->create([
+				'lang' => 'id',
+				'title' => $blogsData[$index]['title'],
+				'subtitle' => $blogsData[$index]['subtitle'],
+				'content' => $blogsData[$index]['content'],
+			]);
+
+			// Terjemahan bahasa Inggris
+			$blog->translations()->create([
+				'lang' => 'en',
+				'title' => $data['title'],
+				'subtitle' => $data['subtitle'],
+				'content' => $data['content'],
+			]);
+		}
     }
 }

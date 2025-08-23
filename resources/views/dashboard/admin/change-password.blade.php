@@ -1,6 +1,6 @@
 @extends('layout.dashboard')
 
-@section('title', 'Dashboard ProfileAdmin | ACG')
+@section('title', 'Dashboard Profile Admin  - PT. Adhi Cahaya Global')
 
 @section('li-breadcrumb')
 <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>

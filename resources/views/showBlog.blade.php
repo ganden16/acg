@@ -1,8 +1,8 @@
 @extends('layout.landingPage')
 
-@section('title')
-{{ isset($blog) ? $blog->translations->first()?->title : 'Detail Blog | ACG' }}
-@endsection
+{{-- @section('title')
+{{ isset($blog) ? $blog->translations->first()?->title . ' - PT. Adhi Cahaya Global' : 'Detail Blog | ACG' }}
+@endsection --}}
 
 @section('content')
 
@@ -30,7 +30,7 @@
 
 <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 mb-16">
     <div class="px-4 mx-auto max-w-screen-xl">
-        <h2 class="text-2xl font-bold text-gray-900">{{ __('function.otherArticles') }}</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-5">{{ __('function.otherArticles') }}</h2>
         <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ($randomFourBlogs as $randomBlog)
                 <article class="max-w-xs">

@@ -1,6 +1,6 @@
 @extends('layout.landingPage')
 
-@section('title', 'Product | ACG')
+{{-- @section('title', 'Products - PT. Adhi Cahaya Global') --}}
 
 @section('content')
 
