@@ -21,6 +21,16 @@
 	<meta property="og:image" content="{{ asset('assets1/images/logo/acg4-rb.png') }}">
 	<meta property="og:image:alt" content="PT Adhi Cahaya Global - Exporter of Indonesian Spices & Agro Commodities">
 
+	@if(env('GOOGLE_ANALYTICS_ID'))
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_ANALYTICS_ID') }}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', '{{ env('GOOGLE_ANALYTICS_ID') }}');
+		</script>
+	@endif
+
 	<!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title ?? 'PT. Adhi Cahaya Global' }}">

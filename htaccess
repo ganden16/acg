@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Jika request bukan ke file atau folder yang benar-benar ada (seperti assets, js, dll)
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Arahkan semua request ke /public/index.php
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Atur index file
+    RewriteRule ^$ public/ [L]
+</IfModule>
