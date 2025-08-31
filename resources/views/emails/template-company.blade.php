@@ -91,7 +91,7 @@
     <!-- Header -->
     <div class="email-header">
       <h1>New Message from Website Company Profile PT. Adhi Cahaya Global</h1>
-      <p>Contact Form - {{ now()->format('d M Y, H:i') }}</p>
+      <p>Contact Form - {{ now('Asia/Jakarta')->format('d M Y, H:i') }}</p>
     </div>
 
     <!-- Body -->

@@ -30,7 +30,7 @@ class SendMailCompany extends Mailable
         return new Envelope(
             to: env('MAIL_COMPANY_ADDRESS'),
             subject: 'New Submission Message From Website',
-            from: new Address(env('MAIL_FROM_ADDRESS'), 'Website Company Profile PT Adhi Cahaya Global'),
+            from: new Address(env('MAIL_FROM_ADDRESS'), 'PT Adhi Cahaya Global'),
             replyTo: [new Address($this->data['email'], $this->data['name'])],
         );
     }
