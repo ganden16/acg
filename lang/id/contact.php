@@ -46,5 +46,8 @@ return [
         ]
     ],
 	 'titleWelcomeMessage' => 'Selamat Datang',
-'descriptionWelcomeMessage' => 'Sebagai tim pemasaran PT Adhi Cahaya Global, kami dengan bangga menyatakan bahwa perusahaan kami dibangun atas prinsip kepercayaan, transparansi, dan profesionalisme dalam membangun hubungan bisnis yang berkelanjutan. Kami percaya bahwa setiap komoditas alam yang kami ekspor bukan hanya sekadar produk, tetapi juga hasil dari kerja keras petani yang layak mendapatkan pengakuan dan nilai yang adil.',
+	 'descriptionWelcomeMessage1' => 'Kami percaya bahwa kekayaan alam Indonesia punya potensi besar untuk dikenal dunia. Lewat kerja sama dengan petani lokal, kami menghadirkan rempah, herbal, dan komoditas asli Indonesia yang berkualitas tinggi dan berstandar internasional.',
+	 'descriptionWelcomeMessage2' => 'Bagi kami, bisnis bukan sekadar jual beli, tapi tentang membangun kepercayaan dan hubungan jangka panjang. Semoga kehadiran PT ACG bisa jadi mitra andal bagi Anda, sekaligus membuka jalan agar produk Indonesia semakin mendunia.',
+
+
 ];

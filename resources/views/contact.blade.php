@@ -134,7 +134,10 @@
 						<div class="space-y-2">
 							<h2 class="text-3xl font-bold text-gray-900">{{ __('contact.titleWelcomeMessage') }}</h2>
 							<p class="text-gray-700 mt-5 leading-relaxed">
-								{{ __('contact.descriptionWelcomeMessage') }}
+								{{ __('contact.descriptionWelcomeMessage1') }}
+							</p>
+							<p class="text-gray-700 mt-3 leading-relaxed">
+								{{ __('contact.descriptionWelcomeMessage2') }}
 							</p>
 						</div>
 				</div>

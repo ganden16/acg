@@ -45,5 +45,6 @@ return[
         ]
     ],
 	 'titleWelcomeMessage' => 'Welcome Message',
-	 'descriptionWelcomeMessage' => 'As the marketing team of PT Adhi Cahaya Global, we are proud to state that our company is built on the principles of trust, transparency, and professionalism in establishing sustainable business relationships. We believe that every natural commodity we export is not just a product, but also the result of hard work by farmers who deserve fair recognition and value.'
+	 'descriptionWelcomeMessage1' => 'We believe that Indonesia\'s natural resources hold great potential to be recognized by the world. Through collaboration with local farmers, we bring authentic Indonesian spices, herbs, and commodities that are high-quality and meet international standards.',
+	 'descriptionWelcomeMessage2' => 'For us, business is not just about buying and selling, but about building trust and long-term relationships. We hope PT ACG can become your reliable partner, while also helping Indonesian products reach a global audience.',
 ];
