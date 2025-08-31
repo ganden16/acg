@@ -30,6 +30,7 @@
       font-size: 24px;
       font-weight: 700;
       margin: 0;
+		color: white;
     }
     .email-header p {
       font-size: 16px;
