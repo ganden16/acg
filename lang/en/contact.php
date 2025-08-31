@@ -44,4 +44,6 @@ return[
             ],
         ]
     ],
+	 'titleWelcomeMessage' => 'Welcome Message',
+	 'descriptionWelcomeMessage' => 'As the marketing team of PT Adhi Cahaya Global, we are proud to state that our company is built on the principles of trust, transparency, and professionalism in establishing sustainable business relationships. We believe that every natural commodity we export is not just a product, but also the result of hard work by farmers who deserve fair recognition and value.'
 ];

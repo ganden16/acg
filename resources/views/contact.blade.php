@@ -40,74 +40,107 @@
 
 <div class="relative bg-white">
 
-  <div class="pt-16 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-20">
-    <div class="px-6 lg:px-8">
-      <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-        <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{ __('contact.titleFormContact') }}</h2>
-        <p class="mt-2 text-lg/8 text-gray-600">{{ __('contact.subtitleFormContact') }}</p>
-        <form action="{{ route('send-email') }}" method="POST" class="mt-16">
-            @csrf
-          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label for="first_name" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formFirstName') }}</label>
-              <div class="mt-2.5">
-                <input type="text" value="{{ old('first_name') }}" name="first_name" id="first_name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
-                @error('first_name')
-                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                @enderror
-              </div>
-            </div>
-            <div>
-              <label for="last_name" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formLastName') }}</label>
-              <div class="mt-2.5">
-                <input type="text" value="{{ old('last_name') }}" name="last_name" id="last_name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
-                @error('last_name')
-                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                @enderror
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="email" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formEmail') }}</label>
-              <div class="mt-2.5">
-                <input id="email" value="{{ old('email') }}" name="email" type="text" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
-                @error('email')
-                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                @enderror
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <div class="flex justify-between text-sm/6">
-                <label for="phone" class="block font-semibold text-gray-900">{{ __('contact.formPhone') }}</label>
-              </div>
-              <div class="mt-2.5">
-                <input type="number" value="{{ old('phone') }}" name="phone" id="phone" autocomplete="tel" aria-describedby="phone-description" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
-                @error('phone')
-                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                @enderror
-              </div>
-            </div>
-            <div class="sm:col-span-2">
-              <div class="flex justify-between text-sm/6">
-                <label for="message" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formMessage') }}</label>
-              </div>
-              <div class="mt-2.5">
-                <textarea id="message" name="message" rows="7" aria-describedby="message-description" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">{{ old('message') }}</textarea>
-                @error('message')
-                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                @enderror
-              </div>
-            </div>
-          </div>
-          <div class="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
-            <button type="submit" class="cursor-pointer rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.sendMessage') }}</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="lg:absolute lg:inset-0 lg:left-1/2 mt-10 lg:mt-0">
-    <img class="h-90% bg-gray-50 object-covers lg:absolute lg:h-full" src="{{ asset('assets1/images/landingPage/picture1-1.png') }}" alt="">
-  </div>
+	<div class="pt-16 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-20">
+		<!-- Kolom Kiri: Form -->
+		<div class="px-6 lg:px-8">
+			<div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+					<h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{ __('contact.titleFormContact') }}</h2>
+					<p class="mt-2 text-lg/8 text-gray-600">{{ __('contact.subtitleFormContact') }}</p>
+					<form action="{{ route('send-email') }}" method="POST" class="mt-16">
+						@csrf
+						<!-- Input fields -->
+						<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+							<!-- First Name -->
+							<div>
+									<label for="first_name" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formFirstName') }}</label>
+									<div class="mt-2.5">
+										<input type="text" value="{{ old('first_name') }}" name="first_name" id="first_name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+										@error('first_name')
+											<p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+										@enderror
+									</div>
+							</div>
+							<!-- Last Name -->
+							<div>
+									<label for="last_name" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formLastName') }}</label>
+									<div class="mt-2.5">
+										<input type="text" value="{{ old('last_name') }}" name="last_name" id="last_name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+										@error('last_name')
+											<p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+										@enderror
+									</div>
+							</div>
+							<!-- Email -->
+							<div class="sm:col-span-2">
+									<label for="email" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formEmail') }}</label>
+									<div class="mt-2.5">
+										<input id="email" value="{{ old('email') }}" name="email" type="text" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+										@error('email')
+											<p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+										@enderror
+									</div>
+							</div>
+							<!-- Phone -->
+							<div class="sm:col-span-2">
+									<div class="flex justify-between text-sm/6">
+										<label for="phone" class="block font-semibold text-gray-900">{{ __('contact.formPhone') }}</label>
+									</div>
+									<div class="mt-2.5">
+										<input type="number" value="{{ old('phone') }}" name="phone" id="phone" autocomplete="tel" aria-describedby="phone-description" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">
+										@error('phone')
+											<p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+										@enderror
+									</div>
+							</div>
+							<!-- Message -->
+							<div class="sm:col-span-2">
+									<div class="flex justify-between text-sm/6">
+										<label for="message" class="block text-sm/6 font-semibold text-gray-900">{{ __('contact.formMessage') }}</label>
+									</div>
+									<div class="mt-2.5">
+										<textarea id="message" name="message" rows="7" aria-describedby="message-description" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600">{{ old('message') }}</textarea>
+										@error('message')
+											<p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+										@enderror
+									</div>
+							</div>
+						</div>
+						<!-- Submit Button -->
+						<div class="mt-10 flex justify-end pt-8">
+							<button type="submit" class="cursor-pointer rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.sendMessage') }}</button>
+						</div>
+					</form>
+			</div>
+		</div>
+
+		<!-- Kolom Kanan: Welcome Message + Foto (Desain Baru) -->
+		<div class="px-2 lg:px-1 mt-10 lg:mt-0">
+			<div class="bg-gradient-to-br from-gray-50 to-gray-100 p-3 rounded-xl shadow-sm max-w-none mx-auto relative overflow-hidden">
+				<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+						<!-- Kolom Kiri: Foto Profil -->
+						<div class="flex flex-col items-center justify-center">
+							<div class="relative w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
+								<img src="{{ asset('assets1/images/landingPage/picture1-1.png') }}" 
+										alt="PT. Adhi Cahaya Global Representative" 
+										class="w-full h-full object-cover object-top"
+								>
+							</div>
+							<div class="mt-6 text-center">
+								<h5 class="text-lg font-bold text-gray-900">Marketing Director</h5>
+							</div>
+						</div>
+
+						<!-- Kolom Kanan: Teks Sambutan -->
+						<div class="space-y-2">
+							<h2 class="text-3xl font-bold text-gray-900">{{ __('contact.titleWelcomeMessage') }}</h2>
+							<p class="text-gray-700 mt-5 leading-relaxed">
+								{{ __('contact.descriptionWelcomeMessage') }}
+							</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">

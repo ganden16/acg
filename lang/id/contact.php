@@ -45,4 +45,6 @@ return [
             ],
         ]
     ],
+	 'titleWelcomeMessage' => 'Selamat Datang',
+'descriptionWelcomeMessage' => 'Sebagai tim pemasaran PT Adhi Cahaya Global, kami dengan bangga menyatakan bahwa perusahaan kami dibangun atas prinsip kepercayaan, transparansi, dan profesionalisme dalam membangun hubungan bisnis yang berkelanjutan. Kami percaya bahwa setiap komoditas alam yang kami ekspor bukan hanya sekadar produk, tetapi juga hasil dari kerja keras petani yang layak mendapatkan pengakuan dan nilai yang adil.',
 ];
