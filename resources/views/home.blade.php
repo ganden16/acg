@@ -53,7 +53,7 @@
 
             <!-- Learn More Button -->
             <div class="mt-4">
-                <a href="https://wa.me/62881082048368" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.learnMore') }}</a>
+                <a href="{{ route('about') }}" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">{{ __('function.learnMore') }}</a>
             </div>
         </div>
 
