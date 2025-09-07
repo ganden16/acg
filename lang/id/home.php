@@ -57,7 +57,7 @@ return [
         ],
         'traceability' => [
             'question' => 'Bisakah saya melacak asal produk yang saya beli?',
-            'answer'   => 'Ya. Kami menyediakan pelacakan penuh untuk semua komoditas kami. Setiap produk berasal dari petani Indonesia yang telah diverifikasi, dan kami menyimpan catatan rinci tentang budidaya, panen, dan pengolahan. Transparansi ini menjamin keaslian dan membangun kepercayaan dalam setiap transaksi.'
+            'answer'   => 'Ya. Kami menyediakan kemampuan pelacakan penuh untuk semua komoditas kami — mulai dari petani Indonesia yang telah diverifikasi, hingga proses panen dan pengolahan. Untuk lebih menjamin keaslian dan kepatuhan terhadap regulasi, kami juga menyertakan dokumen ekspor resmi, yaitu Sertifikat Asal (Certificate of Origin/COO) dan Sertifikat Fitosanitari pada setiap pengiriman. Hal ini memastikan proses bea cukai berjalan lancar sekaligus membangun kepercayaan dalam setiap transaksi.'
         ],
         'direct_farmers' => [
             'question' => 'Apakah Anda bekerja langsung dengan petani?',

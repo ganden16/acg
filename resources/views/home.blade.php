@@ -11,7 +11,7 @@
             <div class="px-6 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 pt-5 lg:pb-48 xl:col-span-6">
                 <div class="mx-auto max-w-lg lg:mx-0">
                     <div class="flex justify-center">
-							<img class="h-40" src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="PT. Adhi Cahaya Global">
+							<img class="h-30" src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="PT. Adhi Cahaya Global">
 						  </div>
                     {{-- <div class="hidden sm:mt-32 md:mt-1 sm:flex lg:mt-16">
                         <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -26,9 +26,15 @@
                     </div>
                 </div>
             </div>
-            <div class="relative mt-6 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0 ">
-                <img class="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto rounded-2xl" src="{{ asset('assets1/images/landingPage/picture4.png') }}" alt="">
-            </div>
+            <div class="block mt-6 lg:col-span-6 xl:mr-0">
+					<div class="overflow-hidden rounded-2xl shadow-xl">
+						<img 
+								src="{{ asset('assets1/images/landingPage/picture4.png') }}" 
+								alt="PT. Adhi Cahaya Global" 
+								class="aspect-3/2  h-auto object-cover"
+						>
+					</div>
+				</div>
         </div>
     </div>
 

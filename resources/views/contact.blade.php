@@ -114,32 +114,29 @@
 		</div>
 
 		<!-- Kolom Kanan: Welcome Message + Foto (Desain Baru) -->
-		<div class="px-2 lg:px-1 mt-10 lg:mt-0">
+		<div class="py-3 lg:px-1 mt-10 lg:mt-0 flex flex-col justify-center">
 			<div class="bg-gradient-to-br from-gray-50 to-gray-100 p-3 rounded-xl shadow-sm max-w-none mx-auto relative overflow-hidden">
-				<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-						<!-- Kolom Kiri: Foto Profil -->
-						<div class="flex flex-col items-center justify-center">
-							<div class="relative w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
-								<img src="{{ asset('assets1/images/landingPage/picture1-1.png') }}" 
-										alt="PT. Adhi Cahaya Global Representative" 
-										class="w-full h-full object-cover object-top"
-								>
-							</div>
-							<div class="mt-6 text-center">
-								<h5 class="text-lg font-bold text-gray-900">Marketing Director</h5>
-							</div>
-						</div>
+				<div class="relative z-10 flex flex-col md:flex-row items-center justify-center md:gap-8 py-6 md:px-0">
+				<!-- Kolom Kiri: Foto Profil -->
+				<div class="flex flex-col items-center justify-center">
+					<div class="relative w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
+						<img src="{{ asset('assets1/images/landingPage/picture1-1.png') }}" 
+							alt="PT. Adhi Cahaya Global Representative" 
+							class="w-full h-full object-cover object-top"
+						>
+					</div>
+					<div class="mt-6 text-center">
+						<h5 class="text-lg font-bold text-gray-900">Marketing Director</h5>
+					</div>
+				</div>
 
-						<!-- Kolom Kanan: Teks Sambutan -->
-						<div class="space-y-2">
-							<h2 class="text-3xl font-bold text-gray-900">{{ __('contact.titleWelcomeMessage') }}</h2>
-							<p class="text-gray-700 mt-5 leading-relaxed">
-								{{ __('contact.descriptionWelcomeMessage1') }}
-							</p>
-							<p class="text-gray-700 mt-3 leading-relaxed">
-								{{ __('contact.descriptionWelcomeMessage2') }}
-							</p>
-						</div>
+				<!-- Kolom Kanan: Teks Sambutan -->
+				<div class="space-y-2">
+					<h2 class="text-3xl font-bold text-gray-900 mt-16 md:mt-0">{{ __('contact.titleWelcomeMessage') }}</h2>
+					<p class="text-gray-700 mt-8 leading-relaxed">
+						{{ __('contact.descriptionWelcomeMessage') }}
+					</p>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -187,7 +184,7 @@
         <figcaption class="mt-6 flex items-center gap-x-1 justify-between">
           <img class="size-20 rounded bg-gray-50" src="{{ asset('assets1/images/logo-acg.png') }}" alt="PT. ADHI CAHAYA GLOBAL">
           <div>
-            <div class="text-gray-600 text-sm">PT. ADHI CAHAYA GLOBAL</div>
+            <div class="text-gray-600 font-semibold">PT. ADHI CAHAYA GLOBAL</div>
           </div>
         </figcaption>
       </figure>

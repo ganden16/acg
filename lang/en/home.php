@@ -52,7 +52,7 @@ return[
         ],
         'traceability' => [
             'question' => 'Can I trace the origin of the products I purchase?',
-            'answer'   => 'Yes. We provide full traceability for all our commodities. Each product is sourced from verified Indonesian farms, and we keep detailed records of cultivation, harvest, and processing. This transparency ensures authenticity and builds trust in every transaction.'
+            'answer'   => 'Yes. We provide full traceability for all our commodities — from verified Indonesian farms through harvest and processing. To further guarantee authenticity and compliance, we also provide official export documentation including Certificate of Origin (COO) and Phytosanitary Certificate with every shipment. This ensures smooth customs clearance and builds trust in every transaction.'
         ],
         'direct_farmers' => [
             'question' => 'Do you work directly with farmers?',

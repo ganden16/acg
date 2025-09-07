@@ -46,8 +46,5 @@ return [
         ]
     ],
 	 'titleWelcomeMessage' => 'Selamat Datang',
-	 'descriptionWelcomeMessage1' => 'Kami percaya bahwa kekayaan alam Indonesia punya potensi besar untuk dikenal dunia. Lewat kerja sama dengan petani lokal, kami menghadirkan rempah, herbal, dan komoditas asli Indonesia yang berkualitas tinggi dan berstandar internasional.',
-	 'descriptionWelcomeMessage2' => 'Bagi kami, bisnis bukan sekadar jual beli, tapi tentang membangun kepercayaan dan hubungan jangka panjang. Semoga kehadiran PT ACG bisa jadi mitra andal bagi Anda, sekaligus membuka jalan agar produk Indonesia semakin mendunia.',
-
-
+	 'descriptionWelcomeMessage' => 'Kami percaya bahwa kekayaan alam Indonesia punya potensi besar untuk dikenal dunia. Lewat kerja sama dengan petani lokal, kami menghadirkan rempah, herbal, dan komoditas asli Indonesia yang berkualitas tinggi dan berstandar internasional. Bagi kami, bisnis bukan sekadar jual beli, tapi tentang membangun kepercayaan dan hubungan jangka panjang. Semoga kehadiran PT. Adhi Cahaya Global bisa jadi mitra andal bagi Anda, sekaligus membuka jalan agar produk Indonesia semakin mendunia.',
 ];

@@ -125,11 +125,11 @@
   <!-- Header -->
   <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-<header class="opacity-90" style="background-color: #fafaf5">
-  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between lg:px-8" style="background-color: #7a8450">
+<header class="opacity-90 w-full" style="background-color: #fafaf5">
+  <nav aria-label="Global" class="flex w-full items-center justify-between px-4 sm:px-6 lg:px-8" style="background-color: #7a8450; min-height: 60px;">
     <div class="flex lg:flex-1">
       <a href="{{ route('home') }}" class="p-2 md:me-10">
-        <img src="{{ asset('assets1/images/logo/acg-5.png') }}" alt="Logo PT. ACG" class="w-40" />
+        <img src="{{ asset('assets1/images/logo/acg4-rb.png') }}" alt="Logo PT. ACG" class="w-10" />
         {{-- <img src="{{ asset('assets1/images/logo-rb-2.png') }}" alt="p-0 m-0" class="w-20" /> --}}
       </a>
     </div>

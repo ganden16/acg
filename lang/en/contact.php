@@ -45,6 +45,5 @@ return[
         ]
     ],
 	 'titleWelcomeMessage' => 'Welcome Message',
-	 'descriptionWelcomeMessage1' => 'We believe that Indonesia\'s natural resources hold great potential to be recognized by the world. Through collaboration with local farmers, we bring authentic Indonesian spices, herbs, and commodities that are high-quality and meet international standards.',
-	 'descriptionWelcomeMessage2' => 'For us, business is not just about buying and selling, but about building trust and long-term relationships. We hope PT ACG can become your reliable partner, while also helping Indonesian products reach a global audience.',
+	 'descriptionWelcomeMessage' => 'We believe that Indonesia\'s natural resources hold great potential to be recognized by the world. Through collaboration with local farmers, we bring authentic Indonesian spices, herbs, and commodities that are high-quality and meet international standards. For us, business is not just about buying and selling, but about building trust and long-term relationships. We hope PT. Adhi Cahaya Global can become your reliable partner, while also helping Indonesian products reach a global audience.',
 ];
