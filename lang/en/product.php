@@ -283,6 +283,21 @@ return [
                     ],
                     'image' => 'assets1/images/products/extravanilla.jpg'
                 ],
+                [
+                    'name' => 'Vanilla Powder',
+                    'overview' => '',
+                    'specifications' => [
+                        ['title' => 'Moisture', 'detail' => '10%'],
+                        ['title' => 'Color', 'detail' => 'Light Brown'],
+                        ['title' => 'Weight', 'detail' => '1 kilogram (per packaging)'],
+                        ['title' => 'Texture', 'detail' => 'Oily, Fine Granules'],
+                        ['title' => 'Mesh Standard', 'detail' => '50–150 micron'],
+                    ],
+                    'best_for' => [
+                        'Perfect for baking & Gourmet drinks or subtitute vanilla beans',
+                    ],
+                    'image' => 'assets1/images/products/vanillapowder.png'
+                ],
             ]
         ],
     ],

@@ -283,6 +283,21 @@ return [
 						],
 						'image' => 'assets1/images/products/extravanilla.jpg'
 					],
+					[
+						'name' => 'Bubuk Vanila',
+						'overview' => '',
+						'specifications' => [
+							['title' => 'Kadar Air', 'detail' => '10%'],
+							['title' => 'Warna', 'detail' => 'Cokelat Muda'],
+							['title' => 'Berat', 'detail' => '1 kilogram (per kemasan)'],
+							['title' => 'Tekstur', 'detail' => 'Berminyak, Butiran Halus'],
+							['title' => 'Standar Mesh', 'detail' => '50–150 mikron'],
+						],
+						'best_for' => [
+							'Sempurna untuk memanggang & minuman gourmet, atau sebagai pengganti polong vanila'
+						],
+						'image' => 'assets1/images/products/vanillapowder.png'
+					],
 			]
 		],
 	],

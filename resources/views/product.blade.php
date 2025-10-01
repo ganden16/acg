@@ -41,7 +41,7 @@
 </div>
 
 
-<div class="bg-white">
+<div class="bg-white flex justify-center">
   <div class="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
     <div class="mx-auto max-w-2xl px-4 lg:max-w-none">
       <div class="max-w-3xl">
