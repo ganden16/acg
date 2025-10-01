@@ -233,7 +233,7 @@ return [
 							'Infus ke dalam sirup dan minuman beralkohol',
 							'Pilihan ekonomis untuk kebutuhan dalam jumlah besar'
 						],
-						'image' => 'assets1/images/products/picture11.png',
+						'image' => 'assets1/images/products/smallvanilla.jpg',
 					],
 					[
 						'name' => 'Vanila Ukuran Sedang (16–17 cm)',
@@ -249,7 +249,7 @@ return [
 							'Ekstrak vanila premium',
 							'Koki dan usaha kecil yang mengutamakan konsistensi kualitas'
 						],
-						'image' => 'assets1/images/products/picture11.png'
+						'image' => 'assets1/images/products/mediumvanilla.jpg'
 					],
 					[
 						'name' => 'Vanila Ukuran Besar (18 cm ke atas)',
@@ -265,7 +265,7 @@ return [
 							'Penyajian visual (penggunaan kuliner mewah)',
 							'Produksi ekstrak khusus'
 						],
-						'image' => 'assets1/images/products/picture11.png'
+						'image' => 'assets1/images/products/largevanilla.jpg'
 					],
 					[
 						'name' => 'Vanila Ukuran Ekstra Besar (20 cm ke atas)',
@@ -281,7 +281,7 @@ return [
 							'Produk unggulan (es krim premium, cokelat artisanal)',
 							'Pajangan di pasar gourmet'
 						],
-						'image' => 'assets1/images/products/picture11.png'
+						'image' => 'assets1/images/products/extravanilla.jpg'
 					],
 			]
 		],
