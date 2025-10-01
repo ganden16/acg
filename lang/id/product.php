@@ -214,6 +214,78 @@ return [
             ]
         ],
     ],
+	 'products_with_variants' => [
+		[
+			'name' => 'Vanilla Planifolia',
+			'general_description' => "Temukan cita rasa luar biasa dari Vanilla Planifolia asal Indonesia, yang dibudidayakan di tanah vulkanik subur dan dimatangkan di bawah sinar matahari tropis. Setiap polong dipetik secara manual oleh petani lokal yang berpengalaman, menghasilkan kualitas unggul dengan tekstur mengilap, kandungan vanilin tinggi, serta aroma yang tak tertahankan—mampu meningkatkan cita rasa setiap resep dan produk Anda.\n\nLebih dari sekadar vanila, produk kami merepresentasikan keaslian dan keberlanjutan—100% alami, non-GMO, serta secara langsung memberdayakan komunitas petani lokal. Dipercaya oleh koki, merek artisanal, dan pembeli global, vanila Indonesia kami adalah pilihan premium bagi mereka yang mengutamakan rasa, kualitas, dan kisah yang layak dibagikan.",
+			'variants' => [
+					[
+						'name' => 'Vanila Ukuran Kecil (13–15 cm)',
+						'overview' => 'Vanila Grade A ukuran kecil kami memang lebih pendek, namun tetap menghadirkan aroma kaya dan kompleks khas Vanilla Planifolia premium asal Indonesia. Ideal untuk produksi ekstrak, infus, dan resep yang tidak terlalu mempertimbangkan ukuran polong, varian ini menawarkan nilai terbaik tanpa mengorbankan kualitas.',
+						'specifications' => [
+							['title' => 'Panjang', 'detail' => '13–15 cm'],
+							['title' => 'Kadar Air', 'detail' => '25–35%'],
+							['title' => 'Kualitas', 'detail' => 'Grade A'],
+							['title' => 'Berat Kemasan', 'detail' => '1 kilogram'],
+						],
+						'best_for' => [
+							'Pembuatan ekstrak & esens',
+							'Infus ke dalam sirup dan minuman beralkohol',
+							'Pilihan ekonomis untuk kebutuhan dalam jumlah besar'
+						],
+						'image' => 'assets1/images/products/picture11.png',
+					],
+					[
+						'name' => 'Vanila Ukuran Sedang (16–17 cm)',
+						'overview' => 'Vanila Grade A ukuran sedang kami menawarkan keseimbangan sempurna antara panjang, aroma, dan fleksibilitas penggunaan. Dengan tekstur lembut dan permukaan mengilap, varian ini sangat cocok untuk dapur profesional maupun produsen ekstrak artisanal.',
+						'specifications' => [
+							['title' => 'Panjang', 'detail' => '16–17 cm'],
+							['title' => 'Kadar Air', 'detail' => '25–35%'],
+							['title' => 'Kualitas', 'detail' => 'Grade A'],
+							['title' => 'Berat Kemasan', 'detail' => '1 kilogram'],
+						],
+						'best_for' => [
+							'Pastry & kue (puding, es krim, crème brûlée)',
+							'Ekstrak vanila premium',
+							'Koki dan usaha kecil yang mengutamakan konsistensi kualitas'
+						],
+						'image' => 'assets1/images/products/picture11.png'
+					],
+					[
+						'name' => 'Vanila Ukuran Besar (18 cm ke atas)',
+						'overview' => 'Vanila Grade A ukuran besar kami sangat dihargai karena ukurannya yang besar dan polongnya yang kaya minyak, memberikan infus rasa yang dalam dan tahan lama. Dengan kandungan vanilin tinggi dan penampilan elegan, varian ini sempurna untuk hidangan gourmet dan aplikasi bernilai tinggi.',
+						'specifications' => [
+							['title' => 'Panjang', 'detail' => '18 cm ke atas'],
+							['title' => 'Kadar Air', 'detail' => '25–35%'],
+							['title' => 'Kualitas', 'detail' => 'Grade A'],
+							['title' => 'Berat Kemasan', 'detail' => '1 kilogram'],
+						],
+						'best_for' => [
+							'Dessert & kembang gula gourmet',
+							'Penyajian visual (penggunaan kuliner mewah)',
+							'Produksi ekstrak khusus'
+						],
+						'image' => 'assets1/images/products/picture11.png'
+					],
+					[
+						'name' => 'Vanila Ukuran Ekstra Besar (20 cm ke atas)',
+						'overview' => 'Vanila Grade A ukuran ekstra besar kami merepresentasikan puncak kualitas vanila Indonesia. Dengan panjang mengesankan, tekstur mengilap, dan biji yang melimpah, varian ini menawarkan daya tarik visual luar biasa serta profil aroma yang sangat intens. Pilihan utama untuk kreasi kuliner premium dan branding mewah.',
+						'specifications' => [
+							['title' => 'Panjang', 'detail' => '20 cm ke atas'],
+							['title' => 'Kadar Air', 'detail' => '25–35%'],
+							['title' => 'Kualitas', 'detail' => 'Grade A'],
+							['title' => 'Berat Kemasan', 'detail' => '1 kilogram'],
+						],
+						'best_for' => [
+							'Kreasi kuliner mewah',
+							'Produk unggulan (es krim premium, cokelat artisanal)',
+							'Pajangan di pasar gourmet'
+						],
+						'image' => 'assets1/images/products/picture11.png'
+					],
+			]
+		],
+	],
     'titleContact' => 'Hubungi Kami Untuk Pertanyaan Produk',
     'descriptionContact' => 'Untuk informasi lebih lanjut mengenai produk kami, harga, dan ketersediaan',
 ];

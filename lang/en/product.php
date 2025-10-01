@@ -214,6 +214,78 @@ return [
             ]
         ],
     ],
+	 'products_with_variants' => [
+        [
+            'name' => 'Vanilla Planifolia',
+            'general_description' => "Discover the exceptional taste of Indonesia’s Vanilla Planifolia, grown in rich volcanic soil and perfected under tropical sunshine. Each bean is handpicked by skilled local farmers, delivering unmatched quality with a glossy texture, high vanillin content, and an irresistible aroma that elevates every recipe and product.\n\nMore than just vanilla, our beans represent authenticity and sustainability—100% natural, non-GMO, and directly empowering local farming communities. Trusted by chefs, artisanal brands, and global buyers, our Indonesian vanilla is the premium choice for those who demand flavor, quality, and a story worth sharing.",
+            'variants' => [
+                [
+                    'name' => 'Small Vanilla Beans (13–15 cm)',
+                    'overview' => 'Our Small Grade A Vanilla Beans may be shorter in length, but they deliver the same rich, complex aroma of premium Indonesian Vanilla planifolia. Ideal for extract production, infusion, and recipes where bean size is less critical, these beans offer excellent value without compromising quality.',
+                    'specifications' => [
+                        ['title' => 'Length', 'detail' => '13–15 cm'],
+                        ['title' => 'Moisture', 'detail' => '25–35%'],
+                        ['title' => 'Quality', 'detail' => 'Grade A'],
+                        ['title' => 'Packaging Weight', 'detail' => '1 kilogram'],
+                    ],
+                    'best_for' => [
+                        'Extract & essence making',
+                        'Infusion into syrups and liqueurs',
+                        'Cost-effective choice for bulk applications'
+                    ],
+                    'image' => 'assets1/images/products/picture11.png',
+                ],
+                [
+                    'name' => 'Medium Vanilla Beans (16–17 cm)',
+                    'overview' => 'Our Medium Grade A Vanilla Beans strike the perfect balance of length, aroma, and versatility. With their supple texture and glossy surface, they are an excellent choice for both professional kitchens and artisanal extract producers.',
+                    'specifications' => [
+                        ['title' => 'Length', 'detail' => '16–17 cm'],
+                        ['title' => 'Moisture', 'detail' => '25–35%'],
+                        ['title' => 'Quality', 'detail' => 'Grade A'],
+                        ['title' => 'Packaging Weight', 'detail' => '1 kilogram'],
+                    ],
+                    'best_for' => [
+                        'Pastry & baking (custards, ice cream, crème brûlée)',
+                        'Premium vanilla extract',
+                        'Chefs and small businesses seeking consistent quality'
+                    ],
+                    'image' => 'assets1/images/products/picture11.png'
+                ],
+                [
+                    'name' => 'Large Vanilla Beans (18 cm and above)',
+                    'overview' => 'Our Large Grade A Vanilla Beans are prized for their size and oil-rich pods, ensuring a deep, long-lasting flavor infusion. With high vanillin content and an elegant presentation, they are perfect for gourmet dishes and high-value applications.',
+                    'specifications' => [
+                        ['title' => 'Length', 'detail' => '18 cm and above'],
+                        ['title' => 'Moisture', 'detail' => '25–35%'],
+                        ['title' => 'Quality', 'detail' => 'Grade A'],
+                        ['title' => 'Packaging Weight', 'detail' => '1 kilogram'],
+                    ],
+                    'best_for' => [
+                        'Gourmet desserts & confectionery',
+                        'Visible presentation (luxury culinary use)',
+                        'Specialty extract production'
+                    ],
+                    'image' => 'assets1/images/products/picture11.png'
+                ],
+                [
+                    'name' => 'Extra Large Vanilla Beans (20 cm and above)',
+                    'overview' => 'Our Extra Large Grade A Vanilla Beans represent the pinnacle of Indonesian vanilla. With impressive length, glossy texture, and abundant seeds, these beans deliver unmatched visual appeal and an intensely aromatic profile. They are the ultimate choice for high-end culinary creations and luxury branding.',
+                    'specifications' => [
+                        ['title' => 'Length', 'detail' => '20 cm and above'],
+                        ['title' => 'Moisture', 'detail' => '25–35%'],
+                        ['title' => 'Quality', 'detail' => 'Grade A'],
+                        ['title' => 'Packaging Weight', 'detail' => '1 kilogram'],
+                    ],
+                    'best_for' => [
+                        'Luxury culinary creations',
+                        'Signature products (premium ice cream, artisanal chocolate)',
+                        'Showcasing in gourmet markets'
+                    ],
+                    'image' => 'assets1/images/products/picture11.png'
+                ],
+            ]
+        ],
+    ],
     'titleContact' => 'Contact Us For Product Inquiries',
     'descriptionContact' => 'For more information about our products, pricing, and availability',
 ];

@@ -80,6 +80,65 @@
     @endforeach
 </div>
 
+{{-- Loop untuk produk dengan varian --}}
+@foreach (__('product.products_with_variants') as $mainProduct)
+    <div class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Nama Produk Utama -->
+            <h2 class="text-3xl font-bold text-center text-gray-900 sm:text-4xl">{{ $mainProduct['name'] }}</h2>
+
+            <!-- Deskripsi Umum -->
+            <div class="mt-6 max-w-4xl mx-auto prose prose-gray">
+                <p class="text-gray-700 whitespace-pre-line">{{ $mainProduct['general_description'] }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loop tiap varian -->
+    @foreach ($mainProduct['variants'] as $variant)
+        <div class="bg-white">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-12 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+                <div>
+                    <!-- Nama Varian -->
+                    <h3 class="text-2xl font-bold text-gray-900">{{ $variant['name'] }}</h3>
+
+                    <!-- Overview -->
+                    <p class="mt-4 text-gray-600">{{ $variant['overview'] }}</p>
+
+                    <!-- Spesifikasi -->
+                    <dl class="mt-8 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+                        @foreach ($variant['specifications'] as $spec)
+                            <div class="border-t border-gray-200 pt-2">
+                                <dt class="font-medium text-gray-900">{{ $spec['title'] }}</dt>
+                                <dd class="mt-1 text-sm text-gray-500">{{ $spec['detail'] }}</dd>
+                            </div>
+                        @endforeach
+                    </dl>
+
+                    <!-- Best For / Keterangan -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900">Best For</h4>
+                        <ul class="mt-2 space-y-1 text-sm text-gray-600 list-disc pl-5">
+                            @foreach ($variant['best_for'] as $use)
+                                <li>{{ $use }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Gambar -->
+                <div class="flex justify-center lg:justify-end">
+                    <img
+                        src="{{ asset($variant['image']) }}"
+                        alt="{{ $product['name'] }}"
+                    		class="rounded-lg bg-gray-100 shadow-md"
+                    >
+                </div>
+            </div>
+        </div>
+    @endforeach
+@endforeach
+
 <div class="bg-gray-100 p-5">
   <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8 shadow-lg">
     <div>
