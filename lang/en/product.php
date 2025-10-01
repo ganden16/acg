@@ -233,7 +233,7 @@ return [
                         'Infusion into syrups and liqueurs',
                         'Cost-effective choice for bulk applications'
                     ],
-                    'image' => 'assets1/images/products/picture11.png',
+                    'image' => 'assets1/images/products/smallvanilla.jpg',
                 ],
                 [
                     'name' => 'Medium Vanilla Beans (16–17 cm)',
@@ -249,7 +249,7 @@ return [
                         'Premium vanilla extract',
                         'Chefs and small businesses seeking consistent quality'
                     ],
-                    'image' => 'assets1/images/products/picture11.png'
+                    'image' => 'assets1/images/products/mediumvanilla.jpg'
                 ],
                 [
                     'name' => 'Large Vanilla Beans (18 cm and above)',
@@ -265,7 +265,7 @@ return [
                         'Visible presentation (luxury culinary use)',
                         'Specialty extract production'
                     ],
-                    'image' => 'assets1/images/products/picture11.png'
+                    'image' => 'assets1/images/products/largevanilla.jpg'
                 ],
                 [
                     'name' => 'Extra Large Vanilla Beans (20 cm and above)',
@@ -281,7 +281,7 @@ return [
                         'Signature products (premium ice cream, artisanal chocolate)',
                         'Showcasing in gourmet markets'
                     ],
-                    'image' => 'assets1/images/products/picture11.png'
+                    'image' => 'assets1/images/products/extravanilla.jpg'
                 ],
             ]
         ],
